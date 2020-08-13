@@ -15,7 +15,7 @@ import static org.testng.Assert.*;
 public class EpamJdiSiteTest extends BaseTest {
 
     @Test
-    public void contentTest() {
+    public void TestEpamJdiElementsLoginAndIframe() {
 
         //Login and assert the Home Page
         login();

@@ -37,14 +37,6 @@ public abstract class BaseTest {
         driver.close();
     }
 
-    public void homePageAssertion() {
-        assertEquals(driver.getTitle(), Assertions.HOME_PAGE.getAssertion());
-    }
-
-    public void userNameAssersion() {
-        assertEquals(driver.findElement(By.id("user-name")).getText(), Assertions.USER_NAME.getAssertion());
-    }
-
     protected void login() {
         homePageAssertion();
 
@@ -55,4 +47,14 @@ public abstract class BaseTest {
 
         userNameAssersion();
     }
+
+    //Common Assertions
+    public void homePageAssertion() {
+        assertEquals(driver.getTitle(), Assertions.HOME_PAGE.getAssertion());
+    }
+
+    public void userNameAssersion() {
+        assertEquals(driver.findElement(By.id("user-name")).getText(), Assertions.USER_NAME.getAssertion());
+    }
+
 }
