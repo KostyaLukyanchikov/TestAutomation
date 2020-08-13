@@ -1,6 +1,10 @@
 package enums;
 
 public enum UIElements {
+
+    HOME_PAGE ("Home Page"),
+    EPAM_JDI_URL ("https://github.com/epam/JDI"),
+
     HOME ("HOME"),
     CONTACT_FORM ("CONTACT FORM"),
     SERVICE ("SERVICE"),

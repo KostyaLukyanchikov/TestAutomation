@@ -1,7 +1,8 @@
 package сase1;
 
-import enums.Assertions;
+import entities.User;
 import enums.UIElements;
+import enums.UserPiterChailovskii;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -18,7 +19,14 @@ public class EpamJdiSiteTest extends BaseTest {
     public void TestEpamJdiElementsLoginAndIframe() {
 
         //Login and assert the Home Page
-        login();
+
+        User user = new User(
+                UserPiterChailovskii.USER_CREDENTIALS.getData(),
+                UserPiterChailovskii.USER_NAME.getData(),
+                UserPiterChailovskii.PASSWORD.getData()
+        );
+
+        login(user);
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays
@@ -100,7 +108,7 @@ public class EpamJdiSiteTest extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
                 .getTagName(), "a");
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
-                .getAttribute("href"), Assertions.EPAM_JDI_URL.getAssertion());
+                .getAttribute("href"), UIElements.EPAM_JDI_URL.getUIelement());
 
 
 
