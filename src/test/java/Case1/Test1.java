@@ -14,23 +14,9 @@ import static org.testng.Assert.*;
 public class Test1 extends BaseTest {
 
     @Test
-    public void login() {
-        assertEquals(driver.getTitle(), "Home Page");
-
-        driver.findElement(By.xpath("//div[contains(@class, 'profile')]")).click();
-        driver.findElement(By.xpath("//input[contains(@id, 'name')]")).sendKeys("epam");
-        driver.findElement(By.xpath("//input[contains(@id, 'password')]")).sendKeys("1234");
-        driver.findElement(By.xpath("//button[contains(@type, 'submit')]")).click();
-
-        assertEquals(driver.findElement(By.id("user-name")).getText(), "PITER CHAILOVSKII");
-    }
-
-    @Test
     public void contentTest() {
-        assertEquals(driver.getTitle(), "Home Page");
 
-
-
+        login();
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays
