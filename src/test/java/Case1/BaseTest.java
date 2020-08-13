@@ -1,5 +1,7 @@
 package Case1;
 
+import enums.Assertions;
+import enums.UIElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +18,8 @@ public abstract class BaseTest {
 
     protected WebDriver driver;
     String epamUrl = PropertyReader.getInstance().getUrl();
+    String epamUserName = PropertyReader.getInstance().getUserName();
+    String epamPassword = PropertyReader.getInstance().getPassword();
 
     @BeforeSuite
     public void setUpDriver() {
@@ -33,14 +37,22 @@ public abstract class BaseTest {
         driver.close();
     }
 
+    public void homePageAssertion() {
+        assertEquals(driver.getTitle(), Assertions.HOME_PAGE.getAssertion());
+    }
+
+    public void userNameAssersion() {
+        assertEquals(driver.findElement(By.id("user-name")).getText(), Assertions.USER_NAME.getAssertion());
+    }
+
     protected void login() {
-        assertEquals(driver.getTitle(), "Home Page");
+        homePageAssertion();
 
         driver.findElement(By.xpath("//div[contains(@class, 'profile')]")).click();
-        driver.findElement(By.xpath("//input[contains(@id, 'name')]")).sendKeys("epam");
-        driver.findElement(By.xpath("//input[contains(@id, 'password')]")).sendKeys("1234");
+        driver.findElement(By.xpath("//input[contains(@id, 'name')]")).sendKeys(epamUserName);
+        driver.findElement(By.xpath("//input[contains(@id, 'password')]")).sendKeys(epamPassword);
         driver.findElement(By.xpath("//button[contains(@type, 'submit')]")).click();
 
-        assertEquals(driver.findElement(By.id("user-name")).getText(), "PITER CHAILOVSKII");
+        userNameAssersion();
     }
 }

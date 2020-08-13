@@ -1,5 +1,6 @@
 package Case1;
 
+import enums.UIElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -52,10 +53,10 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Assert that there are 4 texts on the Index Page under icons and they have proper text
         List<String> expectedImageTexts = Arrays
-                .asList("To include good practices\n" + "and ideas from successful\n" + "EPAM project",
-                        "To be flexible and\n" + "customizable",
-                        "To be multiplatform",
-                        "Already have good base\n" + "(about 20 internal and\n" + "some external projects),\n" + "wish to get more…");
+                .asList(UIElements.IMAGE_TEXT_1.getUIelement(),
+                        UIElements.IMAGE_TEXT_2.getUIelement(),
+                        UIElements.IMAGE_TEXT_3.getUIelement(),
+                        UIElements.IMAGE_TEXT_4.getUIelement());
         List<WebElement> imageTextsElements = driver.findElements(By.xpath("//span[@class = 'benefit-txt']"));
         List<String> actualImageTexts = new ArrayList<>();
         for (WebElement el : imageTextsElements) {
@@ -69,14 +70,9 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Assert a text of the main headers
         List<String> expectedMainTexts = Arrays
-                .asList("EPAM FRAMEWORK WISHES…",
-                        "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT," +
-                                " SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." +
-                                " UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS" +
-                                " NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE DOLOR IN" +
-                                " REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA" +
-                                " PARIATUR.",
-                        "JDI GITHUB");
+                .asList(UIElements.HEADER_TEXT_1.getUIelement(),
+                        UIElements.HEADER_TEXT_2.getUIelement(),
+                        UIElements.HEADER_TEXT_3.getUIelement());
 
         List<WebElement> mainTexts = new ArrayList<>();
         WebElement mainTextEl1 = driver.findElement(By.xpath("//h3[@class='main-title text-center']"));
