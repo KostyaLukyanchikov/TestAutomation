@@ -1,7 +1,6 @@
-package Case1;
+package сase1;
 
 import enums.Assertions;
-import enums.UIElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,10 +1,9 @@
-package Case1;
+package сase1;
 
 import enums.UIElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,13 +25,11 @@ public class EpamJdiSiteTest extends BaseTest {
                         UIElements.CONTACT_FORM.getUIelement(),
                         UIElements.SERVICE.getUIelement(),
                         UIElements.METALS_COLORS.getUIelement());
-        List<WebElement> headerItems = driver
-                .findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"));
+
         List<String> actualHeaderItems = new ArrayList<>();
 
-        for (WebElement item : headerItems) {
-            actualHeaderItems.add(item.getText());
-        }
+        driver.findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"))
+                .forEach(headerItem -> actualHeaderItems.add(headerItem.getText()));
 
         assertEquals(actualHeaderItems.size(), 4);
         assertEquals(actualHeaderItems, expectedHeaderElements);
@@ -55,11 +52,11 @@ public class EpamJdiSiteTest extends BaseTest {
                         UIElements.IMAGE_TEXT_3.getUIelement(),
                         UIElements.IMAGE_TEXT_4.getUIelement());
 
-        List<WebElement> imageTextsElements = driver.findElements(By.xpath("//span[@class = 'benefit-txt']"));
         List<String> actualImageTexts = new ArrayList<>();
-        for (WebElement el : imageTextsElements) {
-            actualImageTexts.add(el.getText());
-        }
+
+        driver.findElements(By.xpath("//span[@class = 'benefit-txt']"))
+                .forEach(imageText -> actualImageTexts.add(imageText.getText()));
+
 
         assertEquals(actualImageTexts, expectedImageTexts);
 

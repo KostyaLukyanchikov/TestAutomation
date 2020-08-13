@@ -3,7 +3,7 @@
 <suite name="Epam JDI Testing">
     <test name="Test Epam JDI page elements with login and iframe">
         <classes>
-            <class name="Case1.EpamJdiSiteTest"></class>
+            <class name="сase1.EpamJdiSiteTest"/>
         </classes>
     </test>
 </suite>
