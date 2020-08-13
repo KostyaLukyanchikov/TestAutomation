@@ -17,11 +17,15 @@ public class EpamJdiSiteTest extends BaseTest {
     @Test
     public void contentTest() {
 
+        //Login and assert the Home Page
         login();
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays
-                .asList("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
+                .asList(UIElements.HOME.getUIelement(),
+                        UIElements.CONTACT_FORM.getUIelement(),
+                        UIElements.SERVICE.getUIelement(),
+                        UIElements.METALS_COLORS.getUIelement());
         List<WebElement> headerItems = driver
                 .findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"));
         List<String> actualHeaderItems = new ArrayList<>();
@@ -42,13 +46,6 @@ public class EpamJdiSiteTest extends BaseTest {
 
         assertEquals(icons.size(), 4);
 
-        SoftAssert softAssert = new SoftAssert();
-        for (WebElement icon : icons) {
-            softAssert.assertTrue(icon.isDisplayed());
-        }
-        softAssert.assertAll();
-
-
 
 
         //Assert that there are 4 texts on the Index Page under icons and they have proper text
@@ -57,6 +54,7 @@ public class EpamJdiSiteTest extends BaseTest {
                         UIElements.IMAGE_TEXT_2.getUIelement(),
                         UIElements.IMAGE_TEXT_3.getUIelement(),
                         UIElements.IMAGE_TEXT_4.getUIelement());
+
         List<WebElement> imageTextsElements = driver.findElements(By.xpath("//span[@class = 'benefit-txt']"));
         List<String> actualImageTexts = new ArrayList<>();
         for (WebElement el : imageTextsElements) {
