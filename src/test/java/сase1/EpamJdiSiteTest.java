@@ -1,5 +1,6 @@
 package сase1;
 
+import enums.Assertions;
 import enums.UIElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -69,22 +70,15 @@ public class EpamJdiSiteTest extends BaseTest {
                         UIElements.HEADER_TEXT_2.getUIelement(),
                         UIElements.HEADER_TEXT_3.getUIelement());
 
-        List<WebElement> mainTexts = new ArrayList<>();
-        WebElement mainTextEl1 = driver.findElement(By.xpath("//h3[@class='main-title text-center']"));
-        mainTexts.add(mainTextEl1);
-        WebElement mainTextEl2 = driver.findElement(By.xpath("//p[@class='main-txt text-center']"));
-        mainTexts.add(mainTextEl2);
-        WebElement mainTextEl3 = driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"));
-        mainTexts.add(mainTextEl3);
-
         List<String> actualMainTexts = new ArrayList<>();
-        for (WebElement el : mainTexts) {
-            actualMainTexts.add(el.getText());
-        }
+        WebElement mainTextEl1 = driver.findElement(By.xpath("//h3[@class='main-title text-center']"));
+        actualMainTexts.add(mainTextEl1.getText());
+        WebElement mainTextEl2 = driver.findElement(By.xpath("//p[@class='main-txt text-center']"));
+        actualMainTexts.add(mainTextEl2.getText());
+        WebElement mainTextEl3 = driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"));
+        actualMainTexts.add(mainTextEl3.getText());
 
         assertEquals(actualMainTexts, expectedMainTexts);
-
-
 
 
         //Assert that there is the iframe in the center of page
@@ -106,8 +100,7 @@ public class EpamJdiSiteTest extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
                 .getTagName(), "a");
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
-                .getAttribute("href"), "https://github.com/epam/JDI");
-
+                .getAttribute("href"), Assertions.EPAM_JDI_URL.getAssertion());
 
 
 
