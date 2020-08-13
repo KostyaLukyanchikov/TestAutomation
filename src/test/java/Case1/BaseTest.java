@@ -6,10 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import utils.PropertyReader;
+
 
 public abstract class BaseTest {
 
     protected WebDriver driver;
+    String epamUrl = PropertyReader.getInstance().getUrl();
 
     @BeforeSuite
     public void setUpDriver() {
@@ -19,7 +22,7 @@ public abstract class BaseTest {
     @BeforeMethod
     public void setUpBrowser() {
         driver = new ChromeDriver();
-        driver.get("https://epam.github.io/JDI/index.html");
+        driver.get(epamUrl);
     }
 
     @AfterMethod
