@@ -12,15 +12,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import utils.PropertyReader;
 
+import java.util.HashMap;
+
 import static org.testng.Assert.assertEquals;
 
 
 public abstract class BaseTest {
 
     protected WebDriver driver;
-    String epamUrl = PropertyReader.getInstance().getUrl();
-    String epamUserName = PropertyReader.getInstance().getUserName();
-    String epamPassword = PropertyReader.getInstance().getPassword();
+    HashMap propValues = PropertyReader.getInstance().readPropValues();
+    String epamUrl = (String) propValues.get("url");
 
     @BeforeSuite
     public void setUpDriver() {
