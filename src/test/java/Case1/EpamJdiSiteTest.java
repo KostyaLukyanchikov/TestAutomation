@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class Test1 extends BaseTest {
+public class EpamJdiSiteTest extends BaseTest {
 
     @Test
     public void contentTest() {

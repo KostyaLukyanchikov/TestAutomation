@@ -3,7 +3,7 @@
 <suite name="Case 1">
     <test name="test">
         <classes>
-            <class name="Case1.Test1"></class>
+            <class name="Case1.EpamJdiSiteTest"></class>
         </classes>
     </test>
 </suite>
