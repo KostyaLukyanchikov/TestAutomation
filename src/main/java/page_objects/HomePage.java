@@ -18,12 +18,4 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void headerItemClick(HeaderElements headerElement) {
-        driver.findElement(By.linkText(headerElement.getHeaderElement())).click();
-    }
-
-    public void headerOpenServiceDropDown(HeaderServiceElements headerServiceElement) {
-        driver.findElement(By.linkText(headerServiceElement.getHeaderServiceElement())).click();
-    }
-
 }

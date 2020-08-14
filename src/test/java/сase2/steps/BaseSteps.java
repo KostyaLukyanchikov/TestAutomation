@@ -6,6 +6,8 @@ import enums.Header.HeaderServiceElements;
 import org.openqa.selenium.WebDriver;
 import page_objects.HomePage;
 
+import java.util.List;
+
 public abstract class BaseSteps {
 
     private WebDriver driver;
@@ -21,12 +23,17 @@ public abstract class BaseSteps {
         homePage.login(user);
     }
 
+
     public void openServiceDropDownMenu() {
         homePage.headerItemClick(HeaderElements.HEADER_SERVICE);
     }
 
     public void navigateToDifferentElementsPage() {
         homePage.headerOpenServiceDropDown(HeaderServiceElements.DIFFERENT_ELEMETNTS);
+    }
+
+    public List<String> getServiceElementsFromHeader() {
+        return homePage.grabServiceElementsFromHeader();
     }
 
 }
