@@ -30,10 +30,10 @@ public class EpamJdiSiteTest extends BaseTest {
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays
-                .asList(UIElements.HOME.getUIelement(),
-                        UIElements.CONTACT_FORM.getUIelement(),
-                        UIElements.SERVICE.getUIelement(),
-                        UIElements.METALS_COLORS.getUIelement());
+                .asList(UIElements.HEADER_HOME.getUIelement(),
+                        UIElements.HEADER_CONTACT_FORM.getUIelement(),
+                        UIElements.HEADER_SERVICE.getUIelement(),
+                        UIElements.HEADER_METALS_COLORS.getUIelement());
 
         List<String> actualHeaderItems = new ArrayList<>();
 

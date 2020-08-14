@@ -6,4 +6,10 @@
             <class name="сase1.EpamJdiSiteTest"/>
         </classes>
     </test>
+
+    <test name="Test Epam JDI Services And Different Elements">
+        <classes>
+            <class name="сase2.EpamJdiLoginAndServicesTest"/>
+        </classes>
+    </test>
 </suite>
