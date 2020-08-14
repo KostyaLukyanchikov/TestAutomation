@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class BasePage {
@@ -29,7 +28,10 @@ public abstract class BasePage {
     private WebElement loginSubmitButton;
 
     @FindBy(xpath = "//ul[contains(@class,'dropdown')]/li")
-    private List<WebElement> serviceDropDownMenu;
+    private List<WebElement> serviceHeaderDropDownMenu;
+
+    @FindBy(xpath = "//*[@id=\"mCSB_1_container\"]/ul/li[3]/ul//span")
+    private List<WebElement> serviceLeftSideBarDropDownMenu;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
@@ -52,7 +54,13 @@ public abstract class BasePage {
 
     public List<String> grabServiceElementsFromHeader() {
         List<String> actualServiceElements = new ArrayList<>();
-        serviceDropDownMenu.forEach(serviceElement -> actualServiceElements.add(serviceElement.getText()));
+        serviceHeaderDropDownMenu.forEach(serviceElement -> actualServiceElements.add(serviceElement.getText()));
+        return actualServiceElements;
+    }
+
+    public List<String> grabServiceElementsFromLeftSideBar() {
+        List<String> actualServiceElements = new ArrayList<>();
+        serviceLeftSideBarDropDownMenu.forEach(serviceElement -> actualServiceElements.add(serviceElement.getAttribute("textContent")));
         return actualServiceElements;
     }
 

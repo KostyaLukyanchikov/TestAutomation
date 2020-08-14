@@ -26,10 +26,8 @@ public class AssertionSteps {
         assertEquals(driver.findElement(By.id("user-name")).getText(), user.getUserCredentials());
     }
 
-    public void headerServiceAssertion(List<String> actualServiceElements,
-                                       List<String> elementsServiceShouldContain) {
-        System.out.println(actualServiceElements.toString() + actualServiceElements.size());
-        System.out.println(elementsServiceShouldContain.toString() + elementsServiceShouldContain.size());
+    public void serviceContentAssertion(List<String> actualServiceElements,
+                                        List<String> elementsServiceShouldContain) {
         assertTrue(actualServiceElements.containsAll(elementsServiceShouldContain));
     }
 

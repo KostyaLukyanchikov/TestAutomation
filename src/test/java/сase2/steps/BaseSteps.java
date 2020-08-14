@@ -24,7 +24,11 @@ public abstract class BaseSteps {
     }
 
 
-    public void openServiceDropDownMenu() {
+    public void openServiceDropDownMenuFromHeader() {
+        homePage.headerItemClick(HeaderElements.HEADER_SERVICE);
+    }
+
+    public void openServiceDropDownMenuFromLeftSideBar() {
         homePage.headerItemClick(HeaderElements.HEADER_SERVICE);
     }
 
@@ -34,6 +38,10 @@ public abstract class BaseSteps {
 
     public List<String> getServiceElementsFromHeader() {
         return homePage.grabServiceElementsFromHeader();
+    }
+
+    public List<String> getServiceElementsFromLeftSideBar() {
+        return homePage.grabServiceElementsFromLeftSideBar();
     }
 
 }
