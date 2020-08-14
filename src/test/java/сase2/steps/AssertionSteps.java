@@ -15,11 +15,11 @@ public class AssertionSteps {
         this.driver = driver;
     }
 
-    public void homePageAssertion() {
-        assertEquals(driver.getTitle(), UIElements.HOME_PAGE.getUIelement());
+    public void browserTitleAssertion(String browserTitle) {
+        assertEquals(driver.getTitle(), browserTitle);
     }
 
-    public void userNameAssersion(User user) {
+    public void userNameAssertion(User user) {
         assertEquals(driver.findElement(By.id("user-name")).getText(), user.getUserCredentials());
     }
 

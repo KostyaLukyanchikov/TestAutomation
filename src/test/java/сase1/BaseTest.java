@@ -1,7 +1,6 @@
 package сase1;
 
 import entities.User;
-import enums.UserPiterChailovskii;
 import enums.UIElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -53,7 +52,7 @@ public abstract class BaseTest {
 
     //Common Assertions
     public void homePageAssertion() {
-        assertEquals(driver.getTitle(), UIElements.HOME_PAGE.getUIelement());
+        assertEquals(driver.getTitle(), UIElements.HOME_PAGE.getUiElement());
     }
 
     public void userNameAssersion(User user) {

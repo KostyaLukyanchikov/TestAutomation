@@ -2,6 +2,7 @@ package сase1;
 
 import entities.User;
 import enums.UIElements;
+import enums.Header.HeaderElements;
 import enums.UserPiterChailovskii;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -30,10 +31,10 @@ public class EpamJdiSiteTest extends BaseTest {
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays
-                .asList(UIElements.HEADER_HOME.getUIelement(),
-                        UIElements.HEADER_CONTACT_FORM.getUIelement(),
-                        UIElements.HEADER_SERVICE.getUIelement(),
-                        UIElements.HEADER_METALS_COLORS.getUIelement());
+                .asList(HeaderElements.HEADER_HOME.getHeaderElement(),
+                        HeaderElements.HEADER_CONTACT_FORM.getHeaderElement(),
+                        HeaderElements.HEADER_SERVICE.getHeaderElement(),
+                        HeaderElements.HEADER_METALS_COLORS.getHeaderElement());
 
         List<String> actualHeaderItems = new ArrayList<>();
 
@@ -56,10 +57,10 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Assert that there are 4 texts on the Index Page under icons and they have proper text
         List<String> expectedImageTexts = Arrays
-                .asList(UIElements.IMAGE_TEXT_1.getUIelement(),
-                        UIElements.IMAGE_TEXT_2.getUIelement(),
-                        UIElements.IMAGE_TEXT_3.getUIelement(),
-                        UIElements.IMAGE_TEXT_4.getUIelement());
+                .asList(UIElements.IMAGE_TEXT_1.getUiElement(),
+                        UIElements.IMAGE_TEXT_2.getUiElement(),
+                        UIElements.IMAGE_TEXT_3.getUiElement(),
+                        UIElements.IMAGE_TEXT_4.getUiElement());
 
         List<String> actualImageTexts = new ArrayList<>();
 
@@ -74,9 +75,9 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Assert a text of the main headers
         List<String> expectedMainTexts = Arrays
-                .asList(UIElements.HEADER_TEXT_1.getUIelement(),
-                        UIElements.HEADER_TEXT_2.getUIelement(),
-                        UIElements.HEADER_TEXT_3.getUIelement());
+                .asList(UIElements.BODY_TEXT_1.getUiElement(),
+                        UIElements.BODY_TEXT_2.getUiElement(),
+                        UIElements.BODY_TEXT_3.getUiElement());
 
         List<String> actualMainTexts = new ArrayList<>();
         WebElement mainTextEl1 = driver.findElement(By.xpath("//h3[@class='main-title text-center']"));
@@ -108,7 +109,7 @@ public class EpamJdiSiteTest extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
                 .getTagName(), "a");
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
-                .getAttribute("href"), UIElements.EPAM_JDI_URL.getUIelement());
+                .getAttribute("href"), UIElements.EPAM_JDI_URL.getUiElement());
 
 
 

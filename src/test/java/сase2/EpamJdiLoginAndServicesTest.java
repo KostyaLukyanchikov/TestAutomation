@@ -1,28 +1,31 @@
 package сase2;
 
 import entities.User;
+import enums.UIElements;
 import enums.UserPiterChailovskii;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import сase2.steps.AssertionSteps;
-import сase2.steps.HomePageLoginSteps;
+import сase2.steps.HomePageSteps;
 
 
 public class EpamJdiLoginAndServicesTest extends BaseTest {
 
     AssertionSteps assertionSteps;
-    HomePageLoginSteps homePageLoginSteps;
+    HomePageSteps homePageLoginSteps;
 
     @Override
     @BeforeMethod
     public void setUpBrowser() {
         super.setUpBrowser();
         assertionSteps = new AssertionSteps(driver);
-        homePageLoginSteps = new HomePageLoginSteps(driver);
+        homePageLoginSteps = new HomePageSteps(driver);
     }
 
     @Test
-    public void servicesDiffrentElementsTest() {
+    public void servicesDifferentElementsTest() {
+
+        assertionSteps.browserTitleAssertion(UIElements.HOME_PAGE.getUiElement());
 
         User user = new User(
                 UserPiterChailovskii.USER_CREDENTIALS.getData(),
@@ -31,8 +34,8 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
         );
 
         homePageLoginSteps.loginAsUser(user);
-        assertionSteps.homePageAssertion();
-        assertionSteps.userNameAssersion(user);
+
+        assertionSteps.userNameAssertion(user);
 
     }
 
