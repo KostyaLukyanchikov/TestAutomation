@@ -1,8 +1,5 @@
-package page_objects;
+package page.objects;
 
-import enums.Header.HeaderElements;
-import enums.Header.HeaderServiceElements;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;

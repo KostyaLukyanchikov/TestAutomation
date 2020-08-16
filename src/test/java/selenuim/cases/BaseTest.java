@@ -1,4 +1,4 @@
-package selenuim_cases;
+package selenuim.cases;
 
 import entities.User;
 import enums.UIElements;

@@ -1,15 +1,17 @@
 package entities;
 
+import enums.LoginUser;
+
 public class User {
 
     private String userCredentials;
     private String userName;
     private String password;
 
-    public User(String userCredentials, String userName, String password) {
-        this.userCredentials = userCredentials;
-        this.userName = userName;
-        this.password = password;
+    public User(LoginUser loginUser) {
+        this.userCredentials = loginUser.getCredentials();
+        this.userName = loginUser.getName();
+        this.password = loginUser.getPassword();
     }
 
     public String getUserCredentials() {

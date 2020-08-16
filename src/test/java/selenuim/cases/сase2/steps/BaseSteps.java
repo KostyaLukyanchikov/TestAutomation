@@ -1,10 +1,10 @@
-package selenuim_cases.сase2.steps;
+package selenuim.cases.сase2.steps;
 
 import entities.User;
 import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
 import org.openqa.selenium.WebDriver;
-import page_objects.HomePage;
+import page.objects.HomePage;
 
 import java.util.List;
 

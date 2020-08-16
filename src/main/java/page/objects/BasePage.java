@@ -1,4 +1,4 @@
-package page_objects;
+package page.objects;
 
 import entities.User;
 import enums.Header.HeaderElements;

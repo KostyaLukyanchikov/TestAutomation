@@ -1,7 +1,7 @@
-package selenuim_cases.сase2.steps;
+package selenuim.cases.сase2.steps;
 
 import org.openqa.selenium.WebDriver;
-import page_objects.HomePage;
+import page.objects.HomePage;
 
 public class HomePageSteps extends BaseSteps{
 

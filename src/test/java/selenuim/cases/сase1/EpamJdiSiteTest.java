@@ -1,13 +1,13 @@
-package selenuim_cases.сase1;
+package selenuim.cases.сase1;
 
 import entities.User;
 import enums.UIElements;
 import enums.Header.HeaderElements;
-import enums.UserPiterChailovskii;
+import enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import selenuim_cases.BaseTest;
+import selenuim.cases.BaseTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,11 +22,7 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Login and assert the Home Page
 
-        User user = new User(
-                UserPiterChailovskii.USER_CREDENTIALS.getData(),
-                UserPiterChailovskii.USER_NAME.getData(),
-                UserPiterChailovskii.PASSWORD.getData()
-        );
+        User user = new User(LoginUser.PITER_CHAILOVSKII);
 
         login(user);
 
