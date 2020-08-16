@@ -34,4 +34,16 @@ public class AssertionSteps {
         assertEquals(numberOfCheckBoxes,4);
     }
 
+    public void differentElementsPageRadioButtonsNumberAssertion(int numberOfRadioButtons) {
+        assertEquals(numberOfRadioButtons,4);
+    }
+
+    public void differentElementsPageDropDownsNumberAssertion(int numberOfDropDowns) {
+        assertEquals(numberOfDropDowns, 1);
+    }
+
+    public void differentElementsPageButtonsNumberAssertion(int numberOfButtons) {
+        assertEquals(numberOfButtons, 2);
+    }
+
 }

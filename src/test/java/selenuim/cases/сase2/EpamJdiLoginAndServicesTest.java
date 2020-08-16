@@ -84,6 +84,15 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         int numberOfCheckBoxes = actionSteps.getTheNumberOfCheckBoxesOnDifferentElementsPage();
         assertionSteps.differentElementsPageCheckBoxesNumberAssertion(numberOfCheckBoxes);
+
+        int numberOfRadioButtons = actionSteps.getTheNumberOfRadioButtonsOnDifferentElementsPage();
+        assertionSteps.differentElementsPageRadioButtonsNumberAssertion(numberOfRadioButtons);
+
+        int numberOfDropDowns = actionSteps.getTheNumberOfDropDowns();
+        assertionSteps.differentElementsPageDropDownsNumberAssertion(numberOfDropDowns);
+
+        int numberOfButtons = actionSteps.getTheNumberOfButtons();
+        assertionSteps.differentElementsPageButtonsNumberAssertion(numberOfButtons);
     }
 
 }

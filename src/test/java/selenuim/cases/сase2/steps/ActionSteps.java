@@ -53,7 +53,18 @@ public class ActionSteps {
     }
 
     public int getTheNumberOfCheckBoxesOnDifferentElementsPage() {
-        return differentElementsPage.grabCheckBoxes().size();
+        return differentElementsPage.grabNumberOfElements(differentElementsPage.getCheckBoxes()).size();
+    }
+    public int getTheNumberOfRadioButtonsOnDifferentElementsPage() {
+        return differentElementsPage.grabNumberOfElements(differentElementsPage.getRadioButtons()).size();
+    }
+
+    public int getTheNumberOfDropDowns() {
+        return differentElementsPage.grabNumberOfElements(differentElementsPage.getDropDowns()).size();
+    }
+
+    public int getTheNumberOfButtons() {
+        return differentElementsPage.grabNumberOfElements(differentElementsPage.getButtons()).size();
     }
 
 }
