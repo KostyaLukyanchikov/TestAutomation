@@ -9,12 +9,12 @@ import page.objects.HomePage;
 
 import java.util.List;
 
-public abstract class BaseSteps {
+public class ActionSteps {
 
     private WebDriver driver;
     private HomePage homePage;
 
-    public BaseSteps(WebDriver driver) {
+    public ActionSteps(WebDriver driver) {
         this.driver = driver;
         homePage = new HomePage(driver);
     }

@@ -1,6 +1,5 @@
 package enums.Header;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,8 +9,6 @@ public enum HeaderElements {
     HEADER_CONTACT_FORM("CONTACT FORM"),
     HEADER_SERVICE("SERVICE"),
     HEADER_METALS_COLORS("METALS & COLORS");
-
-    private static List<String> expectedHeaderElements;
 
     private String headerElement;
 

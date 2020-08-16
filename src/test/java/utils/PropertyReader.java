@@ -1,8 +1,6 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Properties;
 
 public class PropertyReader {
