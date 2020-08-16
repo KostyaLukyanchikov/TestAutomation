@@ -93,6 +93,9 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         int numberOfButtons = actionSteps.getTheNumberOfButtons();
         assertionSteps.differentElementsPageButtonsNumberAssertion(numberOfButtons);
+
+        assertionSteps.rightSectionIsVisibleAssertion();
+        assertionSteps.leftSectionIsVisibleAssertion();
     }
 
 }

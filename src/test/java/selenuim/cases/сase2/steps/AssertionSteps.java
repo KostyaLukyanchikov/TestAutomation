@@ -3,21 +3,22 @@ package selenuim.cases.сase2.steps;
 import enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import page.objects.DifferentElementsPage;
+import page.objects.HomePage;
 
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class AssertionSteps {
-
-    private WebDriver driver;
+public class AssertionSteps extends BaseSteps {
 
     public AssertionSteps(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void browserTitleAssertion(String browserTitle) {
+        System.out.println(driver.getCurrentUrl());
         assertEquals(driver.getTitle(), browserTitle);
     }
 
@@ -44,6 +45,14 @@ public class AssertionSteps {
 
     public void differentElementsPageButtonsNumberAssertion(int numberOfButtons) {
         assertEquals(numberOfButtons, 2);
+    }
+
+    public void rightSectionIsVisibleAssertion() {
+        assertTrue(differentElementsPage.isRightSectionVisible());
+    }
+
+    public void leftSectionIsVisibleAssertion() {
+        assertTrue(differentElementsPage.isLeftSectionVisible());
     }
 
 }

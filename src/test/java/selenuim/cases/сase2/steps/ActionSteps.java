@@ -5,31 +5,22 @@ import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
 import enums.LoginUser;
 import org.openqa.selenium.WebDriver;
+import page.objects.BasePage;
 import page.objects.DifferentElementsPage;
 import page.objects.HomePage;
 
 import java.util.List;
 
-public class ActionSteps {
-
-    private WebDriver driver;
-    private HomePage homePage;
-    private DifferentElementsPage differentElementsPage;
+public class ActionSteps extends BaseSteps {
 
     public ActionSteps(WebDriver driver) {
-        this.driver = driver;
-        homePage = new HomePage(driver);
-        differentElementsPage = new DifferentElementsPage(driver);
+        super(driver);
     }
-
 
     public void loginAsUser(LoginUser loginUser) {
-
         User user = new User(loginUser);
-
         homePage.login(user);
     }
-
 
     public void openServiceDropDownMenuFromHeader() {
         homePage.headerItemClick(HeaderElements.HEADER_SERVICE);

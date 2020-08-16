@@ -19,22 +19,25 @@ public abstract class BasePage {
     protected WebDriver driver;
 
     @FindBy(id = "user-icon")
-    private WebElement userIconButton;
+    protected WebElement userIconButton;
 
     @FindBy(id = "name")
-    private WebElement userNameInputField;
+    protected WebElement userNameInputField;
 
     @FindBy(id = "password")
-    private WebElement userPasswordInputField;
+    protected WebElement userPasswordInputField;
 
     @FindBy(xpath = "//button[@type='submit']")
-    private WebElement loginSubmitButton;
+    protected WebElement loginSubmitButton;
 
     @FindBy(xpath = "//ul[contains(@class,'dropdown')]/li")
-    private List<WebElement> serviceHeaderDropDownMenu;
+    protected List<WebElement> serviceHeaderDropDownMenu;
 
     @FindBy(xpath = "//*[@id=\"mCSB_1_container\"]/ul/li[3]/ul//span")
-    private List<WebElement> serviceLeftSideBarDropDownMenu;
+    protected List<WebElement> serviceLeftSideBarDropDownMenu;
+
+    @FindBy(xpath = "//div[contains(@name, 'navigation-sidebar')]")
+    protected WebElement leftSection;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;

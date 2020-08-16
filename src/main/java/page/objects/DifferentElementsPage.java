@@ -22,6 +22,10 @@ public class DifferentElementsPage extends BasePage {
     @FindBy(xpath = "//div[contains(@class, 'main-content-hg')]//button[contains(@class,'button')] | //div[contains(@class, 'main-content-hg')]//input[contains(@class,'button')]")
     List<WebElement> buttons;
 
+    @FindBy(xpath = "//div[contains(@name, 'log-sidebar')]")
+    WebElement rightSection;
+
+
     public DifferentElementsPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -29,6 +33,14 @@ public class DifferentElementsPage extends BasePage {
 
     public List<WebElement> grabNumberOfElements(List<WebElement> webElementsList) {
         return webElementsList.stream().collect(Collectors.toList());
+    }
+
+    public boolean isRightSectionVisible() {
+        return rightSection.isDisplayed();
+    }
+
+    public boolean isLeftSectionVisible() {
+        return leftSection.isDisplayed();
     }
 
     public List<WebElement> getCheckBoxes() {
