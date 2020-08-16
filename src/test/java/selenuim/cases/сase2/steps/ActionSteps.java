@@ -5,6 +5,7 @@ import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
 import enums.LoginUser;
 import org.openqa.selenium.WebDriver;
+import page.objects.DifferentElementsPage;
 import page.objects.HomePage;
 
 import java.util.List;
@@ -13,10 +14,12 @@ public class ActionSteps {
 
     private WebDriver driver;
     private HomePage homePage;
+    private DifferentElementsPage differentElementsPage;
 
     public ActionSteps(WebDriver driver) {
         this.driver = driver;
         homePage = new HomePage(driver);
+        differentElementsPage = new DifferentElementsPage(driver);
     }
 
 
@@ -37,7 +40,8 @@ public class ActionSteps {
     }
 
     public void navigateToDifferentElementsPage() {
-        homePage.headerOpenServiceDropDown(HeaderServiceElements.DIFFERENT_ELEMENTS);
+        homePage.headerItemClick(HeaderElements.HEADER_SERVICE);
+        homePage.headerServiceDropDownLinkClick(HeaderServiceElements.DIFFERENT_ELEMENTS);
     }
 
     public List<String> getServiceElementsFromHeader() {
@@ -46,6 +50,10 @@ public class ActionSteps {
 
     public List<String> getServiceElementsFromLeftSideBar() {
         return homePage.grabServiceElementsFromLeftSideBar();
+    }
+
+    public int getTheNumberOfCheckBoxesOnDifferentElementsPage() {
+        return differentElementsPage.grabCheckBoxes().size();
     }
 
 }

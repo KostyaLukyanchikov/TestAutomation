@@ -7,9 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class BasePage {
 
@@ -48,19 +51,23 @@ public abstract class BasePage {
         driver.findElement(By.linkText(headerElement.getHeaderElement())).click();
     }
 
-    public void headerOpenServiceDropDown(HeaderServiceElements headerServiceElement) {
+    public void headerServiceDropDownLinkClick(HeaderServiceElements headerServiceElement) {
         driver.findElement(By.linkText(headerServiceElement.getHeaderServiceElement())).click();
     }
 
     public List<String> grabServiceElementsFromHeader() {
-        List<String> actualServiceElements = new ArrayList<>();
-        serviceHeaderDropDownMenu.forEach(serviceElement -> actualServiceElements.add(serviceElement.getText()));
+        List<String> actualServiceElements = serviceHeaderDropDownMenu
+                .stream()
+                .map(serviceElement -> (serviceElement.getText()))
+                .collect(Collectors.toList());
         return actualServiceElements;
     }
 
     public List<String> grabServiceElementsFromLeftSideBar() {
-        List<String> actualServiceElements = new ArrayList<>();
-        serviceLeftSideBarDropDownMenu.forEach(serviceElement -> actualServiceElements.add(serviceElement.getAttribute("textContent")));
+        List<String> actualServiceElements = serviceLeftSideBarDropDownMenu
+                .stream()
+                .map(serviceElement -> serviceElement.getAttribute("textContent"))
+                .collect(Collectors.toList());
         return actualServiceElements;
     }
 

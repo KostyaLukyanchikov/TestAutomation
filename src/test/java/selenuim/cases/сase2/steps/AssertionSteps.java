@@ -30,4 +30,8 @@ public class AssertionSteps {
         assertTrue(actualServiceElements.containsAll(elementsServiceShouldContain));
     }
 
+    public void differentElementsPageCheckBoxesNumberAssertion(int numberOfCheckBoxes) {
+        assertEquals(numberOfCheckBoxes,4);
+    }
+
 }

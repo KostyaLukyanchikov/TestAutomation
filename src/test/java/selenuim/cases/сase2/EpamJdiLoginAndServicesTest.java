@@ -52,7 +52,10 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         actionSteps.openServiceDropDownMenuFromHeader();
         List<String> actualHeaderServiceElements = actionSteps.getServiceElementsFromHeader();
-        assertionSteps.serviceContentAssertion(actualHeaderServiceElements, elementsServiceFromHeaderShouldContain);
+
+        assertionSteps.serviceContentAssertion(
+                actualHeaderServiceElements,
+                elementsServiceFromHeaderShouldContain);
 
     }
 
@@ -64,8 +67,23 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         actionSteps.openServiceDropDownMenuFromLeftSideBar();
         List<String> actualLeftSideBarServiceElements = actionSteps.getServiceElementsFromLeftSideBar();
-        assertionSteps.serviceContentAssertion(actualLeftSideBarServiceElements, elementsServiceFromLeftSideBarShouldContain);
 
+        assertionSteps.serviceContentAssertion(
+                actualLeftSideBarServiceElements,
+                elementsServiceFromLeftSideBarShouldContain);
+
+    }
+
+    @Test
+    public void serviceDifferentElementsPageTest() {
+
+        actionSteps.loginAsUser(user);
+        assertionSteps.userNameAssertion(user);
+
+        actionSteps.navigateToDifferentElementsPage();
+
+        int numberOfCheckBoxes = actionSteps.getTheNumberOfCheckBoxesOnDifferentElementsPage();
+        assertionSteps.differentElementsPageCheckBoxesNumberAssertion(numberOfCheckBoxes);
     }
 
 }
