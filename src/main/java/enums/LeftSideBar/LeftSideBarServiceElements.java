@@ -1,5 +1,8 @@
 package enums.LeftSideBar;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum LeftSideBarServiceElements {
 
     SUPPORT ("Support"),
@@ -18,9 +21,18 @@ public enum LeftSideBarServiceElements {
         this.leftSideBarServiceElement = leftSideBarServiceElement;
     }
 
-
-
     public String getLeftSideBarServiceElement() {
         return leftSideBarServiceElement;
     }
+
+    public static List<String> getElementsServiceFromLeftSideBarShouldContain() {
+        return Arrays.asList(
+                SUPPORT.getLeftSideBarServiceElement(),
+                DATES.getLeftSideBarServiceElement(),
+                COMPLEX_TABLE.getLeftSideBarServiceElement(),
+                SIMPLE_TABLE.getLeftSideBarServiceElement(),
+                TABLE_WITH_PAGES.getLeftSideBarServiceElement(),
+                DIFFERENT_ELEMENTS.getLeftSideBarServiceElement());
+    }
+
 }

@@ -1,19 +1,19 @@
 package selenuim.cases.сase1;
 
-import entities.User;
-import enums.UIElements;
 import enums.Header.HeaderElements;
 import enums.LoginUser;
+import enums.UIElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import selenuim.cases.BaseTest;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class EpamJdiSiteTest extends BaseTest {
 
@@ -21,20 +21,15 @@ public class EpamJdiSiteTest extends BaseTest {
     public void TestEpamJdiElementsLoginAndIframe() {
 
         //Login and assert the Home Page
-
         login(LoginUser.PITER_CHAILOVSKII);
 
+
+
+
         // Assert that there are 4 items on the header section are displayed and the have proper texts
-        List<String> expectedHeaderElements = Arrays
-                .asList(HeaderElements.HEADER_HOME.getHeaderElement(),
-                        HeaderElements.HEADER_CONTACT_FORM.getHeaderElement(),
-                        HeaderElements.HEADER_SERVICE.getHeaderElement(),
-                        HeaderElements.HEADER_METALS_COLORS.getHeaderElement());
-
-        List<String> actualHeaderItems = new ArrayList<>();
-
-        driver.findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"))
-                .forEach(headerItem -> actualHeaderItems.add(headerItem.getText()));
+        List<String> expectedHeaderElements = HeaderElements.getHeaderElements();
+        List<String> actualHeaderItems = driver.findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"))
+                .stream().map(headerItem -> headerItem.getText()).collect(Collectors.toList());
 
         assertEquals(actualHeaderItems.size(), 4);
         assertEquals(actualHeaderItems, expectedHeaderElements);
@@ -50,18 +45,11 @@ public class EpamJdiSiteTest extends BaseTest {
 
 
 
+
         //Assert that there are 4 texts on the Index Page under icons and they have proper text
-        List<String> expectedImageTexts = Arrays
-                .asList(UIElements.IMAGE_TEXT_1.getUiElement(),
-                        UIElements.IMAGE_TEXT_2.getUiElement(),
-                        UIElements.IMAGE_TEXT_3.getUiElement(),
-                        UIElements.IMAGE_TEXT_4.getUiElement());
-
-        List<String> actualImageTexts = new ArrayList<>();
-
-        driver.findElements(By.xpath("//span[@class = 'benefit-txt']"))
-                .forEach(imageText -> actualImageTexts.add(imageText.getText()));
-
+        List<String> expectedImageTexts = UIElements.getImageTexts();
+        List<String> actualImageTexts = driver.findElements(By.xpath("//span[@class = 'benefit-txt']"))
+                .stream().map(imageText -> imageText.getText()).collect(Collectors.toList());;
 
         assertEquals(actualImageTexts, expectedImageTexts);
 
@@ -69,10 +57,7 @@ public class EpamJdiSiteTest extends BaseTest {
 
 
         //Assert a text of the main headers
-        List<String> expectedMainTexts = Arrays
-                .asList(UIElements.BODY_TEXT_1.getUiElement(),
-                        UIElements.BODY_TEXT_2.getUiElement(),
-                        UIElements.BODY_TEXT_3.getUiElement());
+        List<String> expectedMainTexts = UIElements.getBodyTexts();
 
         List<String> actualMainTexts = new ArrayList<>();
         WebElement mainTextEl1 = driver.findElement(By.xpath("//h3[@class='main-title text-center']"));
@@ -83,6 +68,8 @@ public class EpamJdiSiteTest extends BaseTest {
         actualMainTexts.add(mainTextEl3.getText());
 
         assertEquals(actualMainTexts, expectedMainTexts);
+
+
 
 
         //Assert that there is the iframe in the center of page

@@ -1,6 +1,5 @@
 package selenuim.cases.сase2;
 
-import entities.User;
 import enums.Header.HeaderServiceElements;
 import enums.LeftSideBar.LeftSideBarServiceElements;
 import enums.UIElements;
@@ -11,7 +10,6 @@ import selenuim.cases.BaseTest;
 import selenuim.cases.сase2.steps.AssertionSteps;
 import selenuim.cases.сase2.steps.HomePageSteps;
 
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -22,21 +20,11 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
     LoginUser user = LoginUser.PITER_CHAILOVSKII;
 
-    List<String> elementsServiceFromHeaderShouldContain = Arrays.asList(
-            HeaderServiceElements.SUPPORT.getHeaderServiceElement(),
-            HeaderServiceElements.DATES.getHeaderServiceElement(),
-            HeaderServiceElements.COMPLEX_TABLE.getHeaderServiceElement(),
-            HeaderServiceElements.SIMPLE_TABLE.getHeaderServiceElement(),
-            HeaderServiceElements.TABLE_WITH_PAGES.getHeaderServiceElement(),
-            HeaderServiceElements.DIFFERENT_ELEMETNTS.getHeaderServiceElement());
+    List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
+            .getElementsServiceFromHeaderShouldContain();
 
-    List<String> elementsServiceFromLeftSideBarShouldContain = Arrays.asList(
-            LeftSideBarServiceElements.SUPPORT.getLeftSideBarServiceElement(),
-            LeftSideBarServiceElements.DATES.getLeftSideBarServiceElement(),
-            LeftSideBarServiceElements.COMPLEX_TABLE.getLeftSideBarServiceElement(),
-            LeftSideBarServiceElements.SIMPLE_TABLE.getLeftSideBarServiceElement(),
-            LeftSideBarServiceElements.TABLE_WITH_PAGES.getLeftSideBarServiceElement(),
-            LeftSideBarServiceElements.DIFFERENT_ELEMENTS.getLeftSideBarServiceElement());
+    List<String> elementsServiceFromLeftSideBarShouldContain = LeftSideBarServiceElements
+            .getElementsServiceFromLeftSideBarShouldContain();
 
     @Override
     @BeforeMethod

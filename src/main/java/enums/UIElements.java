@@ -1,5 +1,9 @@
 package enums;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public enum UIElements {
 
     //Assertions
@@ -31,6 +35,16 @@ public enum UIElements {
 
     public String getUiElement() {
         return uIElement;
+    }
+
+    public static List<String> getImageTexts() {
+        return Arrays.asList(
+                IMAGE_TEXT_1.getUiElement(), IMAGE_TEXT_2.getUiElement(),
+                IMAGE_TEXT_3.getUiElement(), IMAGE_TEXT_4.getUiElement());
+    }
+
+    public static List<String> getBodyTexts() {
+        return Arrays.asList(BODY_TEXT_1.getUiElement(), BODY_TEXT_2.getUiElement(), BODY_TEXT_3.getUiElement());
     }
 
 }

@@ -37,7 +37,7 @@ public abstract class BaseSteps {
     }
 
     public void navigateToDifferentElementsPage() {
-        homePage.headerOpenServiceDropDown(HeaderServiceElements.DIFFERENT_ELEMETNTS);
+        homePage.headerOpenServiceDropDown(HeaderServiceElements.DIFFERENT_ELEMENTS);
     }
 
     public List<String> getServiceElementsFromHeader() {
