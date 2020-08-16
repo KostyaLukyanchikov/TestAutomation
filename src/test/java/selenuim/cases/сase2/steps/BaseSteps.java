@@ -3,6 +3,7 @@ package selenuim.cases.сase2.steps;
 import entities.User;
 import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
+import enums.LoginUser;
 import org.openqa.selenium.WebDriver;
 import page.objects.HomePage;
 
@@ -19,7 +20,10 @@ public abstract class BaseSteps {
     }
 
 
-    public void loginAsUser(User user) {
+    public void loginAsUser(LoginUser loginUser) {
+
+        User user = new User(loginUser);
+
         homePage.login(user);
     }
 

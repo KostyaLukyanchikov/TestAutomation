@@ -20,9 +20,7 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
     AssertionSteps assertionSteps;
     HomePageSteps homePageSteps;
 
-
-    User user = new User(LoginUser.PITER_CHAILOVSKII);
-
+    LoginUser user = LoginUser.PITER_CHAILOVSKII;
 
     List<String> elementsServiceFromHeaderShouldContain = Arrays.asList(
             HeaderServiceElements.SUPPORT.getHeaderServiceElement(),
@@ -54,7 +52,6 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
         assertionSteps.browserTitleAssertion(UIElements.HOME_PAGE.getUiElement());
 
         homePageSteps.loginAsUser(user);
-
         assertionSteps.userNameAssertion(user);
 
     }

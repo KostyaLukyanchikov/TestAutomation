@@ -1,6 +1,7 @@
 package selenuim.cases;
 
 import entities.User;
+import enums.LoginUser;
 import enums.UIElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -36,7 +37,10 @@ public abstract class BaseTest {
         driver.close();
     }
 
-    protected void login(User user) {
+    protected void login(LoginUser loginUser) {
+
+        User user = new User(loginUser);
+
         homePageAssertion();
 
 

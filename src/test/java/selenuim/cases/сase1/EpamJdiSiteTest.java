@@ -22,9 +22,7 @@ public class EpamJdiSiteTest extends BaseTest {
 
         //Login and assert the Home Page
 
-        User user = new User(LoginUser.PITER_CHAILOVSKII);
-
-        login(user);
+        login(LoginUser.PITER_CHAILOVSKII);
 
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = Arrays

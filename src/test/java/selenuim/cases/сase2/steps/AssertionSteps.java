@@ -1,6 +1,7 @@
 package selenuim.cases.сase2.steps;
 
 import entities.User;
+import enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,8 +22,8 @@ public class AssertionSteps {
         assertEquals(driver.getTitle(), browserTitle);
     }
 
-    public void userNameAssertion(User user) {
-        assertEquals(driver.findElement(By.id("user-name")).getText(), user.getUserCredentials());
+    public void userNameAssertion(LoginUser user) {
+        assertEquals(driver.findElement(By.id("user-name")).getText(), user.getCredentials());
     }
 
     public void serviceContentAssertion(List<String> actualServiceElements,
