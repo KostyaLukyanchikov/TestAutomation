@@ -19,8 +19,8 @@ import static org.testng.Assert.assertEquals;
 public abstract class BaseTest {
 
     protected WebDriver driver;
-    HashMap propValues = PropertyReader.getInstance().readPropValues();
-    String epamUrl = (String) propValues.get("url");
+    PropertyReader propValues = PropertyReader.getInstance();
+    String epamUrl = (String) propValues.getDataFromProperties("url");
 
     @BeforeSuite
     public void setUpDriver() {

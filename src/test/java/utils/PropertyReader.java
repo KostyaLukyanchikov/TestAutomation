@@ -28,18 +28,12 @@ public class PropertyReader {
             System.out.println("Properties File Not Found...");
             e.printStackTrace();
         }
+
     }
 
 
-
-    public HashMap readPropValues() {
-        HashMap<String, String> keyValues= new HashMap<String, String>();
-        Enumeration enumeration = properties.keys();
-        while (enumeration.hasMoreElements()) {
-            String key = (String) enumeration.nextElement();
-            String value = properties.getProperty(key);
-            keyValues.put(key.toString(), value.toString());
-        }
-        return keyValues;
+    public String getDataFromProperties(String key) {
+        return properties.getProperty(key, null);
     }
+
 }

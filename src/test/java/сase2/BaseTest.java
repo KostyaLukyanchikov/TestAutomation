@@ -4,19 +4,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ReporterConfig;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import utils.PropertyReader;
 
 import java.util.HashMap;
+import java.util.Properties;
 
 
 public abstract class BaseTest {
 
     protected WebDriver driver;
-    HashMap propValues = PropertyReader.getInstance().readPropValues();
-    String epamUrl = (String) propValues.get("url");
+    PropertyReader propValues = PropertyReader.getInstance();
+    String epamUrl = (String) propValues.getDataFromProperties("url");
 
     @BeforeSuite
     public void setUpDriver() {
