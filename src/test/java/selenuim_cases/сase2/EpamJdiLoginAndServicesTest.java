@@ -1,4 +1,4 @@
-package сase2;
+package selenuim_cases.сase2;
 
 import entities.User;
 import enums.Header.HeaderServiceElements;
@@ -7,8 +7,9 @@ import enums.UIElements;
 import enums.UserPiterChailovskii;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import сase2.steps.AssertionSteps;
-import сase2.steps.HomePageSteps;
+import selenuim_cases.BaseTest;
+import selenuim_cases.сase2.steps.AssertionSteps;
+import selenuim_cases.сase2.steps.HomePageSteps;
 
 import java.util.Arrays;
 import java.util.List;

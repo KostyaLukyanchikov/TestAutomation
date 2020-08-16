@@ -1,7 +1,6 @@
-package сase2.steps;
+package selenuim_cases.сase2.steps;
 
 import entities.User;
-import enums.UIElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

@@ -1,4 +1,4 @@
-package сase1;
+package selenuim_cases.сase1;
 
 import entities.User;
 import enums.UIElements;
@@ -7,6 +7,7 @@ import enums.UserPiterChailovskii;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import selenuim_cases.BaseTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
