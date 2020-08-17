@@ -61,4 +61,8 @@ public class ActionSteps extends BaseSteps {
         differentElementsPage.clickOnCheckBox(radioButton);
     }
 
+    public void selectDropDownColor(String color) {
+        differentElementsPage.selectDropDownValue(color);
+    }
+
 }

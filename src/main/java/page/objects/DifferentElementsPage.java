@@ -25,6 +25,9 @@ public class DifferentElementsPage extends BasePage {
     @FindBy(xpath = "//select")
     List<WebElement> dropDowns;
 
+    @FindBy(xpath = "//select[contains(@class, 'form')]")
+    WebElement dropDownColor;
+
     @FindBy(xpath = "//div[contains(@class, 'main-content-hg')]//button[contains(@class,'button')] | //div[contains(@class, 'main-content-hg')]//input[contains(@class,'button')]")
     List<WebElement> buttons;
 
@@ -90,14 +93,6 @@ public class DifferentElementsPage extends BasePage {
     }
 
     public List<String> getLogs() {
-//        Pattern pattern = Pattern.compile("([a-zA-Z].*(?=:))");
-//        return logsList
-//                .stream()
-//                .map(row -> pattern.matcher(row.getText()))
-//                .filter(Matcher::find)
-//                .map(Matcher::group)
-//                .collect(Collectors.toList());
-
         Pattern pattern = Pattern.compile("([a-zA-Z].*)");
         return logsList
                 .stream()
@@ -105,6 +100,14 @@ public class DifferentElementsPage extends BasePage {
                 .filter(Matcher::find)
                 .map(Matcher::group)
                 .collect(Collectors.toList());
+    }
+
+    public void selectDropDownValue(String color) {
+        new Select(dropDownColor).selectByVisibleText(color);
+    }
+
+    public String getDropDownValue() {
+        return new Select(dropDownColor).getFirstSelectedOption().getText();
     }
 
 }

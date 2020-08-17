@@ -12,8 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class AssertionSteps extends BaseSteps {
 
@@ -63,8 +62,16 @@ public class AssertionSteps extends BaseSteps {
         assertTrue(differentElementsPage.isCheckBoxSelected(checkBox));
     }
 
+    public void checkBoxUnSelected(String checkBox) {
+        assertFalse(differentElementsPage.isCheckBoxSelected(checkBox));
+    }
+
     public void radioButtonSelected(String radioButton) {
         assertTrue(differentElementsPage.isCheckBoxSelected(radioButton));
+    }
+
+    public void radioButtonUnSelected(String radioButton) {
+        assertFalse(differentElementsPage.isCheckBoxSelected(radioButton));
     }
 
     public void checkLogs(List<String> elementsToCheck) {
@@ -73,6 +80,10 @@ public class AssertionSteps extends BaseSteps {
                 .reverse(logs)
                 .subList(logs.size() - elementsToCheck.size(), logs.size());
         assertEquals(elementsToCheck, logs);
+    }
+
+    public void dropDownColorAssertion(String color) {
+        assertEquals(differentElementsPage.getDropDownValue(), color);
     }
 
 }

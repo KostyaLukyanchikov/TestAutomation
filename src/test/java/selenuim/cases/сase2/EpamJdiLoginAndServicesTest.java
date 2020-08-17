@@ -11,9 +11,7 @@ import selenuim.cases.BaseTest;
 import selenuim.cases.сase2.steps.ActionSteps;
 import selenuim.cases.сase2.steps.AssertionSteps;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class EpamJdiLoginAndServicesTest extends BaseTest {
@@ -80,11 +78,14 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
     @Test
     public void serviceDifferentElementsPageTest() {
 
+        //Login
         actionSteps.loginAsUser(loginUser);
         assertionSteps.userNameAssertion(loginUser);
 
+        //Navigate to different elements page
         actionSteps.navigateToDifferentElementsPage();
 
+        //Assert number of elements on the page
         int numberOfCheckBoxes = actionSteps.getTheNumberOfCheckBoxesOnDifferentElementsPage();
         assertionSteps.differentElementsPageCheckBoxesNumberAssertion(numberOfCheckBoxes);
 
@@ -97,22 +98,37 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
         int numberOfButtons = actionSteps.getTheNumberOfButtons();
         assertionSteps.differentElementsPageButtonsNumberAssertion(numberOfButtons);
 
+        //Assert right and left section
         assertionSteps.rightSectionIsVisibleAssertion();
         assertionSteps.leftSectionIsVisibleAssertion();
 
+        //Select checkboxes and assert logs changed
         actionSteps.selectCheckBox("Water");
         actionSteps.selectCheckBox("Wind");
         assertionSteps.checkBoxSelected("Water");
         assertionSteps.checkBoxSelected("Wind");
-
         assertionSteps.checkLogs(Arrays.asList(
                 Logs.WATER_BOX_ON.getButtonState(),
                 Logs.WIND_BOX_ON.getButtonState()));
 
+        //Select radio button and assert logs changed
         actionSteps.selectRadioButton("Selen");
         assertionSteps.radioButtonSelected("Selen");
+        assertionSteps.checkLogs(Collections.singletonList(Logs.SELEN_RADIO_ON.getButtonState()));
 
-        assertionSteps.checkLogs(Arrays.asList(Logs.SELEN_RADIO_ON.getButtonState()));
+        //Select drop down and assert logs changed
+        actionSteps.selectDropDownColor("Yellow");
+        assertionSteps.dropDownColorAssertion("Yellow");
+        assertionSteps.checkLogs(Collections.singletonList(Logs.YELLOW_DROP_DOWN_ON.getButtonState()));
+
+        //Unselect checkboxes and assert logs changed
+        actionSteps.selectCheckBox("Water");
+        actionSteps.selectCheckBox("Wind");
+        assertionSteps.checkBoxUnSelected("Water");
+        assertionSteps.checkBoxUnSelected("Wind");
+        assertionSteps.checkLogs(Arrays.asList(
+                Logs.WATER_BOX_OFF.getButtonState(),
+                Logs.WIND_BOX_OFF.getButtonState()));
 
     }
 
