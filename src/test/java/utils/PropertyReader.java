@@ -23,7 +23,6 @@ public class PropertyReader {
             System.out.println("Properties File Not Found...");
             e.printStackTrace();
         }
-
     }
 
 }

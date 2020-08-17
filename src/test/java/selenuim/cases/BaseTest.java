@@ -1,13 +1,11 @@
 package selenuim.cases;
 
-import entities.User;
 import enums.LoginUser;
 import enums.UIElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ReporterConfig;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -42,17 +40,15 @@ public abstract class BaseTest {
 
     protected void login(LoginUser loginUser) {
 
-        User user = new User(loginUser);
-
         homePageAssertion();
 
 
         driver.findElement(By.xpath("//div[contains(@class, 'profile')]")).click();
-        driver.findElement(By.xpath("//input[contains(@id, 'name')]")).sendKeys(user.getUserName());
-        driver.findElement(By.xpath("//input[contains(@id, 'password')]")).sendKeys(user.getPassword());
+        driver.findElement(By.xpath("//input[contains(@id, 'name')]")).sendKeys(loginUser.getName());
+        driver.findElement(By.xpath("//input[contains(@id, 'password')]")).sendKeys(loginUser.getPassword());
         driver.findElement(By.xpath("//button[contains(@type, 'submit')]")).click();
 
-        userNameAssersion(user);
+        userNameAssersion(loginUser);
     }
 
     //Common Assertions
@@ -60,8 +56,8 @@ public abstract class BaseTest {
         assertEquals(driver.getTitle(), UIElements.HOME_PAGE.getUiElement());
     }
 
-    public void userNameAssersion(User user) {
-        assertEquals(driver.findElement(By.id("user-name")).getText(), user.getUserCredentials());
+    public void userNameAssersion(LoginUser loginUser) {
+        assertEquals(driver.findElement(By.id("user-name")).getText(), loginUser.getCredentials());
     }
 
 }

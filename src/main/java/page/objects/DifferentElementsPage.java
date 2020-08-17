@@ -33,6 +33,8 @@ public class DifferentElementsPage extends BasePage {
     @FindBy(xpath = "//*[text()[contains(.,'Wind')]]/input")
     WebElement windCheckBox;
 
+    @FindBy(xpath = "//div[contains(@class, 'info-panel')]")
+    WebElement logPanel;
 
     public DifferentElementsPage(WebDriver driver) {
         super(driver);
