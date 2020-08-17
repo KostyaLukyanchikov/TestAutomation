@@ -18,8 +18,7 @@ public class ActionSteps extends BaseSteps {
     }
 
     public void loginAsUser(LoginUser loginUser) {
-        User user = new User(loginUser);
-        homePage.login(user);
+        homePage.login(loginUser);
     }
 
     public void openServiceDropDownMenuFromHeader() {
@@ -56,6 +55,10 @@ public class ActionSteps extends BaseSteps {
 
     public int getTheNumberOfButtons() {
         return differentElementsPage.grabNumberOfElements(differentElementsPage.getButtons()).size();
+    }
+
+    public void selectCheckBox(String checkBox) {
+        differentElementsPage.clickOnCheckBox(checkBox);
     }
 
 }

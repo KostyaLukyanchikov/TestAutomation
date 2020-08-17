@@ -55,4 +55,8 @@ public class AssertionSteps extends BaseSteps {
         assertTrue(differentElementsPage.isLeftSectionVisible());
     }
 
+    public void checkBoxSelected(String checkBox) {
+        assertTrue(differentElementsPage.isCheckBoxSelected(checkBox));
+    }
+
 }

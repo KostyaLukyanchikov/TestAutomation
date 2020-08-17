@@ -18,7 +18,7 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
     AssertionSteps assertionSteps;
     ActionSteps actionSteps;
 
-    LoginUser user = LoginUser.PITER_CHAILOVSKII;
+    LoginUser loginUser = LoginUser.PITER_CHAILOVSKII;
 
     List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
             .getElementsServiceFromHeaderShouldContain();
@@ -39,16 +39,16 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         assertionSteps.browserTitleAssertion(UIElements.HOME_PAGE.getUiElement());
 
-        actionSteps.loginAsUser(user);
-        assertionSteps.userNameAssertion(user);
+        actionSteps.loginAsUser(loginUser);
+        assertionSteps.userNameAssertion(loginUser);
 
     }
 
     @Test
     public void serviceFromHeaderContentTest() {
 
-        actionSteps.loginAsUser(user);
-        assertionSteps.userNameAssertion(user);
+        actionSteps.loginAsUser(loginUser);
+        assertionSteps.userNameAssertion(loginUser);
 
         actionSteps.openServiceDropDownMenuFromHeader();
         List<String> actualHeaderServiceElements = actionSteps.getServiceElementsFromHeader();
@@ -62,8 +62,8 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
     @Test
     public void serviceFromLeftSideBarContentTest() {
 
-        actionSteps.loginAsUser(user);
-        assertionSteps.userNameAssertion(user);
+        actionSteps.loginAsUser(loginUser);
+        assertionSteps.userNameAssertion(loginUser);
 
         actionSteps.openServiceDropDownMenuFromLeftSideBar();
         List<String> actualLeftSideBarServiceElements = actionSteps.getServiceElementsFromLeftSideBar();
@@ -77,8 +77,8 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
     @Test
     public void serviceDifferentElementsPageTest() {
 
-        actionSteps.loginAsUser(user);
-        assertionSteps.userNameAssertion(user);
+        actionSteps.loginAsUser(loginUser);
+        assertionSteps.userNameAssertion(loginUser);
 
         actionSteps.navigateToDifferentElementsPage();
 
@@ -96,6 +96,11 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
 
         assertionSteps.rightSectionIsVisibleAssertion();
         assertionSteps.leftSectionIsVisibleAssertion();
+
+        actionSteps.selectCheckBox("Water");
+        actionSteps.selectCheckBox("Wind");
+        assertionSteps.checkBoxSelected("Water");
+        assertionSteps.checkBoxSelected("Wind");
     }
 
 }

@@ -5,21 +5,18 @@ import java.util.Properties;
 
 public class PropertyReader {
 
-    private static PropertyReader instance;
     private static Properties properties;
     private static String propPath = "src/test/resources/config.properties";
 
-    public static synchronized PropertyReader getInstance() {
-        if (instance == null) {
-            instance = new PropertyReader();
-            instance.getPropValues();
+    public static Properties getInstance() {
+        if (properties == null) {
+            getPropValues();
         }
-        return instance;
+        return properties;
     }
 
-    public void getPropValues() {
+    public static void getPropValues() {
         properties = new Properties();
-
         try (FileInputStream props = new FileInputStream(propPath)) {
             properties.load(props);
         } catch (Exception e) {
@@ -27,11 +24,6 @@ public class PropertyReader {
             e.printStackTrace();
         }
 
-    }
-
-
-    public String getDataFromProperties(String key) {
-        return properties.getProperty(key, null);
     }
 
 }

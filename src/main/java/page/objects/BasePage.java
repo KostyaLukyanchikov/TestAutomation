@@ -3,6 +3,7 @@ package page.objects;
 import entities.User;
 import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
+import enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,9 +44,9 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
-    public void login(User user) {
+    public void login(LoginUser user) {
         userIconButton.click();
-        userNameInputField.sendKeys(user.getUserName());
+        userNameInputField.sendKeys(user.getName());
         userPasswordInputField.sendKeys(user.getPassword());
         loginSubmitButton.click();
     }

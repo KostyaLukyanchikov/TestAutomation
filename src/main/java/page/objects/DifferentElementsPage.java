@@ -1,9 +1,11 @@
 package page.objects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,6 +26,12 @@ public class DifferentElementsPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(@name, 'log-sidebar')]")
     WebElement rightSection;
+
+    @FindBy(xpath = "//*[text()[contains(.,'Water')]]/input")
+    WebElement waterCheckBox;
+
+    @FindBy(xpath = "//*[text()[contains(.,'Wind')]]/input")
+    WebElement windCheckBox;
 
 
     public DifferentElementsPage(WebDriver driver) {
@@ -57,6 +65,14 @@ public class DifferentElementsPage extends BasePage {
 
     public List<WebElement> getButtons() {
         return buttons;
+    }
+
+    public void clickOnCheckBox(String checkBoxName) {
+        driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", checkBoxName))).click();
+    }
+
+    public boolean isCheckBoxSelected(String checkBoxName) {
+        return driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", checkBoxName))).isSelected();
     }
 
 }
