@@ -10,6 +10,7 @@ import selenuim.cases.BaseTest;
 import selenuim.cases.сase2.steps.ActionSteps;
 import selenuim.cases.сase2.steps.AssertionSteps;
 
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -101,6 +102,8 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
         actionSteps.selectCheckBox("Wind");
         assertionSteps.checkBoxSelected("Water");
         assertionSteps.checkBoxSelected("Wind");
+
+        assertionSteps.checkLogs(Arrays.asList("Water", "Wind"));
     }
 
 }

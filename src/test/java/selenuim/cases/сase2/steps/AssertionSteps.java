@@ -1,5 +1,6 @@
 package selenuim.cases.сase2.steps;
 
+import com.google.common.collect.Lists;
 import enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,9 @@ import page.objects.DifferentElementsPage;
 import page.objects.HomePage;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -57,6 +61,12 @@ public class AssertionSteps extends BaseSteps {
 
     public void checkBoxSelected(String checkBox) {
         assertTrue(differentElementsPage.isCheckBoxSelected(checkBox));
+    }
+
+    public void checkLogs(List<String> selectedCheckBoxes) {
+        List<String> logs = differentElementsPage.getLogs();
+        logs = Lists.reverse(logs);
+        assertEquals(selectedCheckBoxes, logs);
     }
 
 }

@@ -3,11 +3,15 @@ package page.objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.json.JsonOutput;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class DifferentElementsPage extends BasePage {
@@ -33,8 +37,8 @@ public class DifferentElementsPage extends BasePage {
     @FindBy(xpath = "//*[text()[contains(.,'Wind')]]/input")
     WebElement windCheckBox;
 
-    @FindBy(xpath = "//div[contains(@class, 'info-panel')]")
-    WebElement logPanel;
+    @FindBy(xpath = "//ul[contains(@class, 'logs')]//li")
+    List<WebElement> logsList;
 
     public DifferentElementsPage(WebDriver driver) {
         super(driver);
@@ -75,6 +79,16 @@ public class DifferentElementsPage extends BasePage {
 
     public boolean isCheckBoxSelected(String checkBoxName) {
         return driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", checkBoxName))).isSelected();
+    }
+
+    public List<String> getLogs() {
+        Pattern pattern = Pattern.compile("([a-zA-Z].*(?=:))");
+        return logsList
+                .stream()
+                .map(row -> pattern.matcher(row.getText()))
+                .filter(Matcher::find)
+                .map(Matcher::group)
+                .collect(Collectors.toList());
     }
 
 }
