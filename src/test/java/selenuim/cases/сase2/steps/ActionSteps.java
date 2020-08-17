@@ -57,4 +57,8 @@ public class ActionSteps extends BaseSteps {
         differentElementsPage.clickOnCheckBox(checkBox);
     }
 
+    public void selectRadioButton(String radioButton) {
+        differentElementsPage.clickOnCheckBox(radioButton);
+    }
+
 }

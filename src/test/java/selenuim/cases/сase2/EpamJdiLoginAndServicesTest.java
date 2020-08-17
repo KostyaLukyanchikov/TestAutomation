@@ -3,6 +3,7 @@ package selenuim.cases.сase2;
 import enums.Header.HeaderServiceElements;
 import enums.LeftSideBar.LeftSideBarServiceElements;
 import enums.LoginUser;
+import enums.Logs;
 import enums.UIElements;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,6 +11,7 @@ import selenuim.cases.BaseTest;
 import selenuim.cases.сase2.steps.ActionSteps;
 import selenuim.cases.сase2.steps.AssertionSteps;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -103,7 +105,15 @@ public class EpamJdiLoginAndServicesTest extends BaseTest {
         assertionSteps.checkBoxSelected("Water");
         assertionSteps.checkBoxSelected("Wind");
 
-        assertionSteps.checkLogs(Arrays.asList("Water", "Wind"));
+        assertionSteps.checkLogs(Arrays.asList(
+                Logs.WATER_BOX_ON.getButtonState(),
+                Logs.WIND_BOX_ON.getButtonState()));
+
+        actionSteps.selectRadioButton("Selen");
+        assertionSteps.radioButtonSelected("Selen");
+
+        assertionSteps.checkLogs(Arrays.asList(Logs.SELEN_RADIO_ON.getButtonState()));
+
     }
 
 }

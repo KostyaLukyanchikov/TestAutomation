@@ -81,8 +81,24 @@ public class DifferentElementsPage extends BasePage {
         return driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", checkBoxName))).isSelected();
     }
 
+    public void clickOnRadioButton(String radioButtonName) {
+        driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", radioButtonName))).click();
+    }
+
+    public boolean isRadioButtonSelected(String radioButtonName) {
+        return driver.findElement(By.xpath(String.format("//*[text()[contains(.,'%s')]]/input", radioButtonName))).isSelected();
+    }
+
     public List<String> getLogs() {
-        Pattern pattern = Pattern.compile("([a-zA-Z].*(?=:))");
+//        Pattern pattern = Pattern.compile("([a-zA-Z].*(?=:))");
+//        return logsList
+//                .stream()
+//                .map(row -> pattern.matcher(row.getText()))
+//                .filter(Matcher::find)
+//                .map(Matcher::group)
+//                .collect(Collectors.toList());
+
+        Pattern pattern = Pattern.compile("([a-zA-Z].*)");
         return logsList
                 .stream()
                 .map(row -> pattern.matcher(row.getText()))

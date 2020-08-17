@@ -63,10 +63,16 @@ public class AssertionSteps extends BaseSteps {
         assertTrue(differentElementsPage.isCheckBoxSelected(checkBox));
     }
 
-    public void checkLogs(List<String> selectedCheckBoxes) {
+    public void radioButtonSelected(String radioButton) {
+        assertTrue(differentElementsPage.isCheckBoxSelected(radioButton));
+    }
+
+    public void checkLogs(List<String> elementsToCheck) {
         List<String> logs = differentElementsPage.getLogs();
-        logs = Lists.reverse(logs);
-        assertEquals(selectedCheckBoxes, logs);
+        logs = Lists
+                .reverse(logs)
+                .subList(logs.size() - elementsToCheck.size(), logs.size());
+        assertEquals(elementsToCheck, logs);
     }
 
 }
