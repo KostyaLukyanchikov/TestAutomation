@@ -12,4 +12,10 @@
             <class name="selenuim.cases.сase2.EpamJdiLoginAndServiceDifferentElementsTest"/>
         </classes>
     </test>
+
+    <test name="Test Epam JDI Services And Table With Pages">
+        <classes>
+            <class name="selenide.cases.case3.EpamJdiLoginAndServiceTableWithPagesTest"/>
+        </classes>
+    </test>
 </suite>

@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import enums.LoginUser;
 import enums.UIElements;
 import org.openqa.selenium.By;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.PropertyReader;
 
@@ -27,6 +28,10 @@ public abstract class BaseTest {
         open(epamUrl);
     }
 
+    @AfterMethod
+    public void tearDown() {
+        closeWebDriver();
+    }
 
     //Common Assertions
     public void pageTitleAssertion(UIElements uiElement) {
