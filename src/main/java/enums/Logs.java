@@ -2,6 +2,7 @@ package enums;
 
 public enum Logs {
 
+    //Different Elements Page
     WATER_BOX_ON ("Water: condition changed to true"),
     WIND_BOX_ON ("Wind: condition changed to true"),
     WATER_BOX_OFF ("Water: condition changed to false"),
