@@ -9,7 +9,7 @@
 
     <test name="Test Epam JDI Services And Different Elements">
         <classes>
-            <class name="selenuim.cases.сase2.EpamJdiLoginAndServicesTest"/>
+            <class name="selenuim.cases.сase2.EpamJdiLoginAndServiceDifferentElementsTest"/>
         </classes>
     </test>
 </suite>

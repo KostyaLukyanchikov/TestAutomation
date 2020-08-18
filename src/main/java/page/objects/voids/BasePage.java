@@ -1,4 +1,4 @@
-package page.objects;
+package page.objects.voids;
 
 import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;

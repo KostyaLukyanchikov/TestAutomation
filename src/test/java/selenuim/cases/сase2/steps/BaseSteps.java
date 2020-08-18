@@ -1,8 +1,8 @@
 package selenuim.cases.сase2.steps;
 
 import org.openqa.selenium.WebDriver;
-import page.objects.DifferentElementsPage;
-import page.objects.HomePage;
+import page.objects.voids.DifferentElementsPage;
+import page.objects.voids.HomePage;
 
 public abstract class BaseSteps {
 

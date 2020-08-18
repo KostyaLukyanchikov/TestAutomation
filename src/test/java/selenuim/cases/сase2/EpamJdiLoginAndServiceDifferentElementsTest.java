@@ -14,7 +14,7 @@ import selenuim.cases.сase2.steps.AssertionSteps;
 import java.util.*;
 
 
-public class EpamJdiLoginAndServicesTest extends BaseTest {
+public class EpamJdiLoginAndServiceDifferentElementsTest extends BaseTest {
 
     AssertionSteps assertionSteps;
     ActionSteps actionSteps;
