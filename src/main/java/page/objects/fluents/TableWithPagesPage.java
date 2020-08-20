@@ -15,27 +15,27 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TableWithPagesPage extends BasePage {
 
+    @FindBy(css = "select[name='table-with-pages_length']")
+    private SelenideElement dropDown;
+
+    @FindBy(css = "input[type= 'search']")
+    private SelenideElement searchInput;
+
+    @FindBy(css = "div[name = 'log-sidebar']")
+    private SelenideElement rightSection;
+
+    @FindBy(xpath = "//ul[contains(@class, 'logs')]//li")
+    private List<SelenideElement> logsList;
+
+    @FindBy(xpath = "//tbody//tr")
+    private List<SelenideElement> searchList;
+
+    @FindBy(xpath = "//tbody//tr//td[2]")
+    private List<SelenideElement> searchElementsNowSectionList;
+
     public SelenideElement getDropDown() {
         return dropDown;
     }
-
-    @FindBy(css = "select[name='table-with-pages_length']")
-    SelenideElement dropDown;
-
-    @FindBy(css = "input[type= 'search']")
-    SelenideElement searchInput;
-
-    @FindBy(css = "div[name = 'log-sidebar']")
-    SelenideElement rightSection;
-
-    @FindBy(xpath = "//ul[contains(@class, 'logs')]//li")
-    List<SelenideElement> logsList;
-
-    @FindBy(xpath = "//tbody//tr")
-    List<SelenideElement> searchList;
-
-    @FindBy(xpath = "//tbody//tr//td[2]")
-    List<SelenideElement> searchElementsNowSectionList;
 
     public int getDropDownValue() {
         return Integer.parseInt(dropDown.getValue());

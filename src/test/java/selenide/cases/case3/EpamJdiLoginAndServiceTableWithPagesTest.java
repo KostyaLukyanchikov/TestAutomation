@@ -3,6 +3,7 @@ package selenide.cases.case3;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.SelenideWait;
 import com.codeborne.selenide.conditions.Visible;
 import enums.Header.HeaderServiceElements;
 import enums.LeftSideBar.LeftSideBarServiceElements;
@@ -22,13 +23,13 @@ import static org.testng.Assert.*;
 
 public class EpamJdiLoginAndServiceTableWithPagesTest extends BaseTest {
 
-    HomePage homePage;
-    TableWithPagesPage tableWithPagesPage;
+    private HomePage homePage;
+    private TableWithPagesPage tableWithPagesPage;
 
-    List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
+    private List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
             .getElementsServiceFromHeaderShouldContain();
 
-    List<String> elementsServiceFromLeftSideBarShouldContain = LeftSideBarServiceElements
+    private List<String> elementsServiceFromLeftSideBarShouldContain = LeftSideBarServiceElements
             .getElementsServiceFromLeftSideBarShouldContain();
 
     @Override
@@ -40,25 +41,20 @@ public class EpamJdiLoginAndServiceTableWithPagesTest extends BaseTest {
 
     @Test
     public void epamJdiElementsLoginTest() {
+
+        //Login test
         pageTitleAssertion(UIElements.HOME_PAGE);
         homePage.login(LoginUser.PITER_CHAILOVSKII);
         userNameAssersion(LoginUser.PITER_CHAILOVSKII);
-    }
 
-    @Test
-    public void serviceDropDownContentTest() {
-        homePage.login(LoginUser.PITER_CHAILOVSKII);
+        //Service DropDown Content Test
         List<String> actualServiceDropDownElementsFromHeader = homePage.grabServiceElementsFromHeader();
         List<String> actualServiceDropDownElementsFromLeftSideBar = homePage.grabServiceElementsFromLeftSideBar();
-
         serviceContentAssertion(actualServiceDropDownElementsFromHeader, elementsServiceFromHeaderShouldContain);
         serviceContentAssertion(actualServiceDropDownElementsFromLeftSideBar, elementsServiceFromLeftSideBarShouldContain);
-    }
 
-    @Test
-    public void serviceTableWithPagesPageTest() {
-        tableWithPagesPage = homePage.login(LoginUser.PITER_CHAILOVSKII)
-                .headerServiceTableWithPagesClick();
+        //Service TableWithPages Page Test
+        tableWithPagesPage = homePage.refresh().headerServiceTableWithPagesClick();
         tableWithPagesPage.getDropDown().shouldHave(Condition.text("5"));
         tableWithPagesPage.getLeftSection().shouldBe(Condition.exist);
         tableWithPagesPage.getRightSection().shouldBe(Condition.exist);

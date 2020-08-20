@@ -1,6 +1,9 @@
 package page.objects.fluents;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.SelenideWait;
 import enums.Header.HeaderElements;
 import enums.Header.HeaderServiceElements;
 import org.openqa.selenium.By;
@@ -39,14 +42,20 @@ public abstract class BasePage {
         page(this);
     }
 
+    public BasePage refresh() {
+        Selenide.refresh();
+        return this;
+    }
+
     public TableWithPagesPage headerServiceTableWithPagesClick() {
         headerItemClick(HeaderElements.HEADER_SERVICE);
         element(By.linkText(HeaderServiceElements.TABLE_WITH_PAGES.getHeaderServiceElement())).click();
         return new TableWithPagesPage();
     }
 
-    private void headerItemClick(HeaderElements headerElement) {
+    public BasePage headerItemClick(HeaderElements headerElement) {
         element(By.linkText(headerElement.getHeaderElement())).click();
+        return this;
     }
 
     public List<String> grabServiceElementsFromHeader() {

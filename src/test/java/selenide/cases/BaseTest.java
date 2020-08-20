@@ -17,8 +17,8 @@ import static org.testng.Assert.assertTrue;
 
 public abstract class BaseTest {
 
-    Properties propValues = PropertyReader.getInstance();
-    String epamUrl = propValues.getProperty("url");
+    protected Properties propValues = PropertyReader.getInstance();
+    protected String epamUrl = propValues.getProperty("url");
 
     @BeforeMethod
     public void setUp() {
@@ -43,8 +43,6 @@ public abstract class BaseTest {
     }
 
     public void serviceContentAssertion(List<String> actualServiceContent, List<String> expectedServiceContend) {
-        //System.out.println(actualServiceContent);
-        //System.out.println(expectedServiceContend);
         assertTrue(actualServiceContent.containsAll(expectedServiceContend));
     }
 
