@@ -16,15 +16,15 @@ import java.util.*;
 
 public class EpamJdiLoginAndServicesTest extends BaseTest {
 
-    AssertionSteps assertionSteps;
-    ActionSteps actionSteps;
+    private AssertionSteps assertionSteps;
+    private ActionSteps actionSteps;
 
-    LoginUser loginUser = LoginUser.PITER_CHAILOVSKII;
+    private LoginUser loginUser = LoginUser.PITER_CHAILOVSKII;
 
-    List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
+    private List<String> elementsServiceFromHeaderShouldContain = HeaderServiceElements
             .getElementsServiceFromHeaderShouldContain();
 
-    List<String> elementsServiceFromLeftSideBarShouldContain = LeftSideBarServiceElements
+    private List<String> elementsServiceFromLeftSideBarShouldContain = LeftSideBarServiceElements
             .getElementsServiceFromLeftSideBarShouldContain();
 
     @Override

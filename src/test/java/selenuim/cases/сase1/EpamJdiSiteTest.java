@@ -23,9 +23,6 @@ public class EpamJdiSiteTest extends BaseTest {
         //Login and assert the Home Page
         login(LoginUser.PITER_CHAILOVSKII);
 
-
-
-
         // Assert that there are 4 items on the header section are displayed and the have proper texts
         List<String> expectedHeaderElements = HeaderElements.getHeaderElements();
         List<String> actualHeaderItems = driver.findElements(By.xpath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li"))
@@ -34,17 +31,11 @@ public class EpamJdiSiteTest extends BaseTest {
         assertEquals(actualHeaderItems.size(), 4);
         assertEquals(actualHeaderItems, expectedHeaderElements);
 
-
-
-
         //Assert that there are 4 images on the Index Page and they are displayed
         List<WebElement> icons = driver
                 .findElements(By.xpath("//div[@class = 'benefit-icon']//span"));
 
         assertEquals(icons.size(), 4);
-
-
-
 
         //Assert that there are 4 texts on the Index Page under icons and they have proper text
         List<String> expectedImageTexts = UIElements.getImageTexts();
@@ -52,9 +43,6 @@ public class EpamJdiSiteTest extends BaseTest {
                 .stream().map(imageText -> imageText.getText()).collect(Collectors.toList());;
 
         assertEquals(actualImageTexts, expectedImageTexts);
-
-
-
 
         //Assert a text of the main headers
         List<String> expectedMainTexts = UIElements.getBodyTexts();
@@ -69,23 +57,11 @@ public class EpamJdiSiteTest extends BaseTest {
 
         assertEquals(actualMainTexts, expectedMainTexts);
 
-
-
-
         //Assert that there is the iframe in the center of page
         assertTrue(driver.findElement(By.id("iframe")).isDisplayed());
-
         driver.switchTo().frame("iframe");
         assertTrue(driver.findElement(By.xpath("//img[@id='epam_logo']")).isDisplayed());
-
         driver.switchTo().defaultContent();
-
-
-
-        //hz gde tam sub header
-
-
-
 
         //Assert that JDI GITHUB is a link and has proper URL
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
@@ -93,14 +69,8 @@ public class EpamJdiSiteTest extends BaseTest {
         assertEquals(driver.findElement(By.xpath("//h3[@class = 'text-center']/child::a"))
                 .getAttribute("href"), UIElements.EPAM_JDI_URL.getUiElement());
 
-
-
         //Assert that there is Left Section
-        //assertTrue(driver.findElement(By.xpath("div[@name = 'navigation-sidebar']")).isDisplayed());
         assertTrue(driver.findElement(By.id("mCSB_1")).isDisplayed());
-
-
-
 
         //Assert that there is Footer
         assertTrue(driver.findElement(By.tagName("footer")).isDisplayed());
