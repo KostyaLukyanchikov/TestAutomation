@@ -7,6 +7,7 @@ public enum UIElements {
 
     //Assertions
     HOME_PAGE ("Home Page"),
+    METALS_AND_COLORS ("Metal and Colors"),
     EPAM_JDI_URL ("https://github.com/epam/JDI"),
 
     //Home Page Images

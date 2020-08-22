@@ -1,15 +1,11 @@
 package selenide.cases.case3;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.SelenideWait;
-import com.codeborne.selenide.conditions.Visible;
 import enums.Header.HeaderServiceElements;
 import enums.LeftSideBar.LeftSideBarServiceElements;
 import enums.LoginUser;
 import enums.UIElements;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -19,7 +15,7 @@ import selenide.cases.BaseTest;
 
 import java.util.List;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class EpamJdiLoginAndServiceTableWithPagesTest extends BaseTest {
 

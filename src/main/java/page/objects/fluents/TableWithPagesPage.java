@@ -1,17 +1,13 @@
 package page.objects.fluents;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.google.common.collect.Lists;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import static com.codeborne.selenide.Selenide.*;
 
 public class TableWithPagesPage extends BasePage {
 
