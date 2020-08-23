@@ -78,7 +78,10 @@ public class EpamJdiLoginAndMetalAndColorsTest extends BaseTest {
         actionSteps.fillTheForm(form);
         actionSteps.submitMetalsAndColorsForm();
 
-        assertionsSteps.resultLogsAssert(form);
+        //Check results
+        List<String> actualResults = actionSteps.getActualResults();
+        assertionsSteps.resultLogsAssert(form, actualResults);
+
     }
 
 }

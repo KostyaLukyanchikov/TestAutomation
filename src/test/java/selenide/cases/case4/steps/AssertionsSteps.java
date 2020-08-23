@@ -1,6 +1,5 @@
 package selenide.cases.case4.steps;
 
-import com.codeborne.selenide.SelenideElement;
 import entities.MetalsAndColorsForm;
 import enums.LoginUser;
 import enums.UIElements;
@@ -23,15 +22,15 @@ public class AssertionsSteps extends BaseSteps {
         assertEquals(element(By.id("user-name")).getText(), loginUser.getCredentials());
     }
 
-    public void resultLogsAssert(MetalsAndColorsForm form) {
+    public void resultLogsAssert(MetalsAndColorsForm form, List<String> actualResults) {
         List<String> formValuesList = form.getValuesList();
-        List<String> values = new ArrayList<>();
+        List<String> expectedResults = new ArrayList<>();
         for (String value : formValuesList) {
             if (!(value.equals("null"))) {
-                values.add(value);
+                expectedResults.add(value);
             }
         }
-        System.out.println(values);
+        assertEquals(actualResults, expectedResults);
     }
 
 }

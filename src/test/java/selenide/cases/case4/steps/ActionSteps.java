@@ -3,6 +3,8 @@ package selenide.cases.case4.steps;
 import entities.MetalsAndColorsForm;
 import enums.LoginUser;
 
+import java.util.List;
+
 public class ActionSteps extends BaseSteps {
 
     public void loginAsUser(LoginUser loginUser) {
@@ -47,6 +49,10 @@ public class ActionSteps extends BaseSteps {
         selectColorsDropDownValue(form.getColorsDropDownValue());
         selectMetalsDropDownValue(form.getMetalsDropDownValue());
         selectVegetablesCheckBoxes(form.getVegetablesDropDownCheckBoxes());
+    }
+
+    public List<String> getActualResults() {
+        return metalsAndColorsPage.getResultsLog();
     }
 
 }

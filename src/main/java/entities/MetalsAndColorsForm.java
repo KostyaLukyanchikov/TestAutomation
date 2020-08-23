@@ -1,7 +1,5 @@
 package entities;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -94,12 +92,17 @@ public class MetalsAndColorsForm {
 
     public List<String> getValuesList() {
         List<String> values = Arrays.asList(
-                getOddRadioButton(),
-                getEvenRadioButton(),
-                Arrays.toString(getElementsCheckBoxes()),
+                Integer.toString(Integer.parseInt(getOddRadioButton()) + Integer.parseInt(getEvenRadioButton())),
+                Arrays.toString(getElementsCheckBoxes())
+                        .replace("[", "")
+                        .replace("]", "")
+                        .trim(),
                 getColorsDropDownValue(),
                 getMetalsDropDownValue(),
-                Arrays.toString(getVegetablesDropDownCheckBoxes()));
+                Arrays.toString(getVegetablesDropDownCheckBoxes())
+                        .replace("[", "")
+                        .replace("]", "")
+                        .trim());
         values.remove(null);
         return values;
     }

@@ -1,13 +1,12 @@
 package page.objects.fluents;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Selenide.element;
@@ -26,7 +25,7 @@ public class MetalsAndColorsPage extends BasePage {
     @FindBy(css = "[id= 'submit-button']")
     private SelenideElement submitButton;
 
-    @FindBy(css = "[class='panel-body-list results']")
+    @FindBy(xpath = "//ul[@class = 'panel-body-list results']//li")
     private List<SelenideElement> resultsList;
 
     public MetalsAndColorsPage clickOdsRadioButton(String number) {
@@ -78,9 +77,12 @@ public class MetalsAndColorsPage extends BasePage {
     }
 
     public List<String> getResultsLog() {
+        Pattern pattern = Pattern.compile("(.*)(: )(.*)");
         return resultsList
                 .stream()
-                .map(SelenideElement::getText)
+                .map(row -> pattern.matcher(row.getText()))
+                .filter(Matcher::find)
+                .map(row -> row.group(3))
                 .collect(Collectors.toList());
     }
 

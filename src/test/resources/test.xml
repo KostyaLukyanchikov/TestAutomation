@@ -18,4 +18,10 @@
             <class name="selenide.cases.case3.EpamJdiLoginAndServiceTableWithPagesTest"/>
         </classes>
     </test>
+
+    <test name="Test Epam JDI Metals and Colors">
+        <classes>
+            <class name="selenide.cases.case4.EpamJdiLoginAndMetalAndColorsTest"/>
+        </classes>
+    </test>
 </suite>
