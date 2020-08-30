@@ -4,74 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f94ef8d-df83-467a-8828-64c3605ee86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/entities/MetalsAndColorsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/DifferentElementsPageElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Header/HeaderElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Header/HeaderServiceElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LoginUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Logs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/UIElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/TableWithPagesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/DifferentElementsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/ActionSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/BaseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/utils/PropertyReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/resources/test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/MetalsAndColorsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/entities/MetalsAndColorsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/DifferentElementsPageElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/DifferentElementsPageElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Header/HeaderElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Header/HeaderElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Header/HeaderServiceElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Header/HeaderServiceElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Logs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/UIElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/UIElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/TableWithPagesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/TableWithPagesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/DifferentElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/DifferentElementsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/ActionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/utils/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/resources/test.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1f94ef8d-df83-467a-8828-64c3605ee86f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +16,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Users\Lukya\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\202.6397.94\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -105,7 +38,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/epam-jdi-maven/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -247,26 +180,26 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1098" y="245" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1598797563774" />
-    <state x="1509" y="397" key="FileChooserDialogImpl" timestamp="1598798003671">
+    <state x="1509" y="397" key="FileChooserDialogImpl" timestamp="1598798636192">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1509" y="397" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1598798003671" />
-    <state width="1721" height="365" key="GridCell.Tab.0.bottom" timestamp="1598798413922">
+    <state x="1509" y="397" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1598798636192" />
+    <state width="1722" height="362" key="GridCell.Tab.0.bottom" timestamp="1598798637869">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1721" height="365" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
-    <state width="1721" height="365" key="GridCell.Tab.0.center" timestamp="1598798413922">
+    <state width="1722" height="362" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1598798637869" />
+    <state width="1722" height="362" key="GridCell.Tab.0.center" timestamp="1598798637869">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1721" height="365" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
-    <state width="1721" height="365" key="GridCell.Tab.0.left" timestamp="1598798413922">
+    <state width="1722" height="362" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1598798637869" />
+    <state width="1722" height="362" key="GridCell.Tab.0.left" timestamp="1598798637868">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1721" height="365" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
-    <state width="1721" height="365" key="GridCell.Tab.0.right" timestamp="1598798413922">
+    <state width="1722" height="362" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1598798637868" />
+    <state width="1722" height="362" key="GridCell.Tab.0.right" timestamp="1598798637869">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1721" height="365" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
+    <state width="1722" height="362" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1598798637869" />
     <state x="815" y="266" key="NewModule_or_Project.wizard" timestamp="1598797633690">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
