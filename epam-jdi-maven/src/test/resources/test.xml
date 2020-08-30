@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Epam JDI Testing">
+    <test name="Test Epam JDI page elements with login and iframe">
+        <classes>
+            <class name="selenuim.cases.сase1.EpamJdiSiteTest"/>
+        </classes>
+    </test>
+
+    <test name="Test Epam JDI Services And Different Elements">
+        <classes>
+            <class name="selenuim.cases.сase2.EpamJdiLoginAndServiceDifferentElementsTest"/>
+        </classes>
+    </test>
+
+    <test name="Test Epam JDI Services And Table With Pages">
+        <classes>
+            <class name="selenide.cases.case3.EpamJdiLoginAndServiceTableWithPagesTest"/>
+        </classes>
+    </test>
+
+    <test name="Test Epam JDI Metals and Colors">
+        <classes>
+            <class name="selenide.cases.case4.EpamJdiLoginAndMetalAndColorsTest"/>
+        </classes>
+    </test>
+</suite>
