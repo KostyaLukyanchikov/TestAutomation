@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f94ef8d-df83-467a-8828-64c3605ee86f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/entities/MetalsAndColorsForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/DifferentElementsPageElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Header/HeaderElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Header/HeaderServiceElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/Logs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/enums/UIElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/fluents/TableWithPagesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/DifferentElementsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/main/java/page/objects/voids/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/ActionSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenide/cases/case4/steps/BaseSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/java/utils/PropertyReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/epam-jdi-maven1/src/test/resources/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/MetalsAndColorsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/entities/MetalsAndColorsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/DifferentElementsPageElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/DifferentElementsPageElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Header/HeaderElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Header/HeaderElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Header/HeaderServiceElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Header/HeaderServiceElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LeftSideBar/LeftSideBarElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LeftSideBar/LeftSideBarServiceElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/LoginUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/Logs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/UIElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/enums/UIElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/MetalsAndColorsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/fluents/TableWithPagesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/fluents/TableWithPagesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/DifferentElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/DifferentElementsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page/objects/voids/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/main/java/page/objects/voids/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case3/EpamJdiLoginAndServiceTableWithPagesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/EpamJdiLoginAndMetalAndColorsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/ActionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/AssertionsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenide/cases/case4/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenide/cases/case4/steps/BaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase1/EpamJdiSiteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/EpamJdiLoginAndServiceDifferentElementsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/ActionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/AssertionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/selenuim/cases/сase2/steps/BaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/java/utils/PropertyReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/epam-jdi-maven/src/test/resources/test.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1goyLAgly8mRb2OOgs99L9yl4Ar" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path" value="C:\Users\Lukya\IdeaProjects\com.github.KostyaLukyanchikov\TestAutomation\epam-jdi-maven\lib" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/epam-jdi-maven/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukya\IdeaProjects\com.github.KostyaLukyanchikov\TestAutomation\epam-jdi-maven" />
+      <recent name="C:\Users\Lukya\IdeaProjects\com.github.KostyaLukyanchikov\TestAutomation\epam-jdi-maven1\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukya\IdeaProjects\com.github.KostyaLukyanchikov\TestAutomation\epam-jdi-maven\src" />
+      <recent name="C:\Users\Lukya\IdeaProjects\com.github.KostyaLukyanchikov\TestAutomation\epam-jdi-maven" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="epam-jdi-maven1" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TestAutomation" />
+      <option name="filePath" value="" />
+      <option name="vmParameters" value="" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" value="" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" value="" />
+      <option name="vmParameters" value="" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" value="" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestNG" type="TestNG">
+      <module name="epam-jdi-maven" />
+      <useClassPathOnly />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/epam-jdi-maven/src/test/resources/test.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <module name="TestAutomation" />
+      <useClassPathOnly />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="SUITE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f94ef8d-df83-467a-8828-64c3605ee86f" name="Default Changelist" comment="" />
+      <created>1598795182134</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598795182134</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="443" y="114" key="#Project_Structure" timestamp="1598797128793">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="443" y="114" key="#Project_Structure/0.0.2752.1112@0.0.2752.1112" timestamp="1598797128793" />
+    <state x="424" y="326" width="1496" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598798358261">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="424" y="326" width="1496" height="774" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1598798358261" />
+    <state x="1098" y="245" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1598797563774">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1098" y="245" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1598797563774" />
+    <state x="1509" y="397" key="FileChooserDialogImpl" timestamp="1598798003671">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1509" y="397" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1598798003671" />
+    <state width="1721" height="365" key="GridCell.Tab.0.bottom" timestamp="1598798413922">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="1721" height="365" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
+    <state width="1721" height="365" key="GridCell.Tab.0.center" timestamp="1598798413922">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="1721" height="365" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
+    <state width="1721" height="365" key="GridCell.Tab.0.left" timestamp="1598798413922">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="1721" height="365" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
+    <state width="1721" height="365" key="GridCell.Tab.0.right" timestamp="1598798413922">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="1721" height="365" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1598798413922" />
+    <state x="815" y="266" key="NewModule_or_Project.wizard" timestamp="1598797633690">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="815" y="266" key="NewModule_or_Project.wizard/0.0.2752.1112@0.0.2752.1112" timestamp="1598797633690" />
+    <state x="454" y="262" key="RollbackChangesDialog" timestamp="1598798075658">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="454" y="262" key="RollbackChangesDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1598798075658" />
+    <state x="625" y="136" key="SettingsEditor" timestamp="1598798117942">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="625" y="136" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1598798117942" />
+    <state x="874" y="453" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1598798016239">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="874" y="453" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.2752.1112@0.0.2752.1112" timestamp="1598798016239" />
+    <state x="963" y="167" key="new project wizard" timestamp="1598798168129">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="963" y="167" key="new project wizard/0.0.2752.1112@0.0.2752.1112" timestamp="1598798168129" />
+  </component>
+</project>
