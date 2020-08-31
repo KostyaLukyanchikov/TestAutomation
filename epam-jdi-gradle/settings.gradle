@@ -5,4 +5,5 @@ include 'tests-common'
 include 'acceptance-tests:cucumber-acceptance-tests'
 findProject(':acceptance-tests:cucumber-acceptance-tests')?.name = 'cucumber-acceptance-tests'
 include 'acceptance-tests'
+include 'tests-common'
 

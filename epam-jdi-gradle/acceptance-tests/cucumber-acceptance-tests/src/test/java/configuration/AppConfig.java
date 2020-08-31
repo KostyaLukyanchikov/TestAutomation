@@ -1,16 +1,25 @@
 package configuration;
 
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springBddProject.qa.gui.configuration.WebDriverConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.*;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.Environment;
 
 @Configuration
-@ComponentScan
-@PropertySource("epam-jdi-gradle/test-config/src/main/resources/config.properties")
+@Import({WebDriverConfig.class})
+@ComponentScan("org.springBddProject.qa.gui")
+@PropertySource("classpath:dev.properties")
 
 public class AppConfig {
 
+    @Autowired
+    private Environment env;
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 
 }
