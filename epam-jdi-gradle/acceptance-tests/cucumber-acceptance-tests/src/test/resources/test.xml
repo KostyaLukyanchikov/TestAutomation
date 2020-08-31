@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Epam JDI Testing">
+    <test name="Test Epam JDI page elements with login and iframe">
+        <classes>
+            <class name="test.selenium.case1.EpamJdiSiteTest"/>
+        </classes>
+    </test>
+</suite>
