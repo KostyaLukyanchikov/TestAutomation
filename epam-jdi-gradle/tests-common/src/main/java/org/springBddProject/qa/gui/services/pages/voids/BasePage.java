@@ -40,9 +40,6 @@ public abstract class BasePage {
     @FindBy(xpath = "//div[contains(@name, 'navigation-sidebar')]")
     protected WebElement leftSection;
 
-    protected BasePage(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public void login(LoginUser user) {
         userIconButton.click();
