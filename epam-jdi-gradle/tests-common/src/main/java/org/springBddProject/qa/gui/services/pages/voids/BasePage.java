@@ -17,7 +17,7 @@ public abstract class BasePage {
 
     @Autowired
     @Lazy
-    protected WebDriver driver;
+    public WebDriver driver;
 
     @FindBy(id = "user-icon")
     protected WebElement userIconButton;
@@ -45,7 +45,6 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//div[contains(@name, 'navigation-sidebar')]")
     protected WebElement leftSection;
-
 
     public void login(LoginUser user) {
         userIconButton.click();

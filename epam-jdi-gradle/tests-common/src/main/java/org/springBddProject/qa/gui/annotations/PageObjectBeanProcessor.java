@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PageObjectBeanProcessor implements BeanPostProcessor {
+
     @Autowired
     @Lazy
     private WebDriver driver;

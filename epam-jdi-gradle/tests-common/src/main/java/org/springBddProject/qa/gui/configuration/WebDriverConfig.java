@@ -1,8 +1,7 @@
 package org.springBddProject.qa.gui.configuration;
 
-
-import io.github.bonigarcia.wdm.config.DriverManagerType;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import javaslang.API;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springBddProject.qa.gui.services.webdriver.WrappedWebDriver;
@@ -12,28 +11,26 @@ import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
 
-import static javaslang.API.Case;
 import static javaslang.API.Match;
 
 @Configuration
 public class WebDriverConfig {
     private final String CHROME = "Chrome";
 
-    @Value("${webdriver.brower:Chrome}")
+    @Value("${webdriver.browser:Chrome}")
     private String browserName;
+
 
     @Bean(destroyMethod = "quit")
     public WrappedWebDriver webDriver() throws IOException {
         return Match(browserName).of(
-                Case(CHROME::equalsIgnoreCase, this::initChrome)
+                API.Case(CHROME::equalsIgnoreCase, this::initChrome)
         );
     }
 
     private WrappedWebDriver initChrome() {
-        DriverManagerType chrome = DriverManagerType.CHROME;
-        ChromeDriverManager.getInstance(chrome).setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         return new WrappedWebDriver(driver);
     }
 }

@@ -1,10 +1,8 @@
 package org.springBddProject.qa.gui.services.pages.voids;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.springBddProject.qa.gui.annotations.PageObject;
 
@@ -42,10 +40,6 @@ public class DifferentElementsPage extends BasePage {
 
     @FindBy(xpath = "//ul[contains(@class, 'logs')]//li")
     List<WebElement> logsList;
-
-    public DifferentElementsPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 
     public List<WebElement> grabNumberOfElements(List<WebElement> webElementsList) {
         return webElementsList.stream().collect(Collectors.toList());

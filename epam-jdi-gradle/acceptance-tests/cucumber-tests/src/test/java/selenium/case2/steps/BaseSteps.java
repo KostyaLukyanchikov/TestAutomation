@@ -22,7 +22,7 @@ public abstract class BaseSteps {
 
     @Autowired
     @Lazy
-    protected WrappedWebDriver driver;
+    public WrappedWebDriver driver;
 
     @Value("${site.url}")
     protected String epamUrl;

@@ -2,7 +2,6 @@ package selenium.case2.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springBddProject.qa.gui.services.enums.Header.HeaderServiceElements;
@@ -14,9 +13,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AssertionSteps extends BaseSteps {
+
+
     @Then("My personal account name shows")
     public void nameShows(){
-        assertEquals(driver.findElement(By.id("user-name")).getText(), LoginUser.PITER_CHAILOVSKII.getCredentials());
+        assertEquals(homePage.getUserNameShown(), LoginUser.PITER_CHAILOVSKII.getCredentials());
     }
 
     @Then("Service drop down elements *elements* should be displayed")
