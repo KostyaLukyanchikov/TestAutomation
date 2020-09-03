@@ -1,10 +1,9 @@
-package selenium.case2.steps;
+package selenium.case1.steps;
 
 import configuration.AppConfig;
-import org.openqa.selenium.WebDriver;
-import org.springBddProject.qa.gui.services.pages.voids.DifferentElementsPage;
-import org.springBddProject.qa.gui.services.pages.voids.HomePage;
+import org.springBddProject.qa.gui.services.webdriver.WrappedWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,15 +14,12 @@ import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER
 @ContextConfiguration(classes = {AppConfig.class})
 @DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
 public abstract class BaseSteps {
-    @Autowired
-    @Lazy
-    protected WebDriver driver;
 
     @Autowired
     @Lazy
-    protected HomePage homePage;
+    protected WrappedWebDriver driver;
 
-    @Autowired
-    @Lazy
-    protected DifferentElementsPage differentElementsPage;
+    @Value("${site.url}")
+    protected String epamUrl;
+
 }

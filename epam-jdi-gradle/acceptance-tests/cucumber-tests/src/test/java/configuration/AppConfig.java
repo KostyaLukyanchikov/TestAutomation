@@ -11,10 +11,7 @@ import org.springframework.core.env.Environment;
 @ComponentScans({
         @ComponentScan("org.springBddProject.qa.gui"),
         @ComponentScan("selenium.case2.steps")})
-@PropertySources({
-        @PropertySource("classpath:/${NG_ENV:dev}.properties"),
-        //@PropertySource("file:tests-config/src/main/resources/dev.properties")
-})
+@PropertySource("classpath:/dev.properties")
 public class AppConfig {
 
     @Autowired
@@ -24,5 +21,4 @@ public class AppConfig {
     public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
-
 }

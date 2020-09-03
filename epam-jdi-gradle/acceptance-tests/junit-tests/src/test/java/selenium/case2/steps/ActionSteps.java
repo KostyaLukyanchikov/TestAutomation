@@ -1,7 +1,6 @@
 package selenium.case2.steps;
 
 
-import org.openqa.selenium.WebDriver;
 import org.springBddProject.qa.gui.services.enums.Header.HeaderElements;
 import org.springBddProject.qa.gui.services.enums.Header.HeaderServiceElements;
 import org.springBddProject.qa.gui.services.enums.LoginUser;
@@ -11,10 +10,6 @@ import java.util.List;
 
 @Component
 public class ActionSteps extends BaseSteps {
-
-    public ActionSteps(WebDriver driver) {
-        super(driver);
-    }
 
     public void loginAsUser(LoginUser loginUser) {
         homePage.login(loginUser);

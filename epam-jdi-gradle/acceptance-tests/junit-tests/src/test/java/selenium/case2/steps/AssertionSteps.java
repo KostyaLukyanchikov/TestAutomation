@@ -2,7 +2,6 @@ package selenium.case2.steps;
 
 import com.google.common.collect.Lists;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.springBddProject.qa.gui.services.enums.LoginUser;
 import org.springframework.stereotype.Component;
 
@@ -13,10 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Component
 public class AssertionSteps extends BaseSteps {
-
-    public AssertionSteps(WebDriver driver) {
-        super(driver);
-    }
 
     public void browserTitleAssertion(String browserTitle) {
         assertEquals(driver.getTitle(), browserTitle);

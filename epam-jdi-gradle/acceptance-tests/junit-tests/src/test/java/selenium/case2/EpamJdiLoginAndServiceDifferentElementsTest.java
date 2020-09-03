@@ -23,8 +23,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {AppConfig.class})
 public class EpamJdiLoginAndServiceDifferentElementsTest extends BaseTest {
 

@@ -1,12 +1,12 @@
 package org.springBddProject.qa.gui.services.pages.voids;
 
-import org.springBddProject.qa.gui.services.enums.Header.HeaderElements;
-import org.springBddProject.qa.gui.services.enums.Header.HeaderServiceElements;
-import org.springBddProject.qa.gui.services.enums.LoginUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.springBddProject.qa.gui.services.enums.Header.HeaderElements;
+import org.springBddProject.qa.gui.services.enums.Header.HeaderServiceElements;
+import org.springBddProject.qa.gui.services.enums.LoginUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
@@ -32,10 +32,16 @@ public abstract class BasePage {
     protected WebElement loginSubmitButton;
 
     @FindBy(xpath = "//ul[contains(@class,'dropdown')]/li")
-    protected List<WebElement> serviceHeaderDropDownMenu;
+    protected List<WebElement> serviceHeaderDropDownMenuItems;
 
     @FindBy(xpath = "//*[@id=\"mCSB_1_container\"]/ul/li[3]/ul//span")
-    protected List<WebElement> serviceLeftSideBarDropDownMenu;
+    protected List<WebElement> serviceLeftSideBarDropDownMenuItems;
+
+    @FindBy(xpath = "//ul[contains(@class,'dropdown')]")
+    protected WebElement serviceHeaderDropDownMenu;
+
+    @FindBy(xpath = "//*[@id=\"mCSB_1_container\"]/ul/li[3]/ul")
+    protected WebElement serviceLeftSideBarDropDownMenu;
 
     @FindBy(xpath = "//div[contains(@name, 'navigation-sidebar')]")
     protected WebElement leftSection;
@@ -57,7 +63,7 @@ public abstract class BasePage {
     }
 
     public List<String> grabServiceElementsFromHeader() {
-        List<String> actualServiceElements = serviceHeaderDropDownMenu
+        List<String> actualServiceElements = serviceHeaderDropDownMenuItems
                 .stream()
                 .map(serviceElement -> (serviceElement.getText()))
                 .collect(Collectors.toList());
@@ -65,11 +71,19 @@ public abstract class BasePage {
     }
 
     public List<String> grabServiceElementsFromLeftSideBar() {
-        List<String> actualServiceElements = serviceLeftSideBarDropDownMenu
+        List<String> actualServiceElements = serviceLeftSideBarDropDownMenuItems
                 .stream()
                 .map(serviceElement -> serviceElement.getAttribute("textContent"))
                 .collect(Collectors.toList());
         return actualServiceElements;
+    }
+
+    public boolean isHeaderServiceDropDownDisplayed() {
+        return serviceHeaderDropDownMenu.isDisplayed();
+    }
+
+    public boolean isLeftSideBarServiceDropDownDisplayed() {
+        return serviceLeftSideBarDropDownMenu.isDisplayed();
     }
 
 }

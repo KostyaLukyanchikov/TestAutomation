@@ -4,4 +4,6 @@ include 'acceptance-tests:junit-tests'
 findProject(':acceptance-tests:junit-tests')?.name = 'junit-tests'
 include 'tests-config'
 include 'tests-common'
+include 'acceptance-tests:cucumber-tests'
+findProject(':acceptance-tests:cucumber-tests')?.name = 'cucumber-tests'
 
