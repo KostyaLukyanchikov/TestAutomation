@@ -7,18 +7,15 @@ import io.cucumber.spring.CucumberContextConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD;
-
 
 @CucumberContextConfiguration
-@ContextConfiguration(classes = {AppConfig.class})
-@DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
+@SpringBootTest(classes = {AppConfig.class})
 public class CucumberHooks {
 
     private static int failedTests = 0;
@@ -35,7 +32,7 @@ public class CucumberHooks {
     }
 
     @After
-    public void logCountOfTest(Scenario scenario) {
+    public void logCountOfTest(Scenario scenario) throws IOException {
         count++;
         if (scenario.isFailed()) {
             failedTests++;
@@ -46,6 +43,7 @@ public class CucumberHooks {
         LOGGER.info("Status of last test is {}",scenario.getStatus());
         LOGGER.info("Passed tests: {}, Failed test: {}",passedTests, failedTests);
     }
+
 
     public void setScenarioName(Scenario scenario) {
         MDC.put("scenarioName", scenario.getName());

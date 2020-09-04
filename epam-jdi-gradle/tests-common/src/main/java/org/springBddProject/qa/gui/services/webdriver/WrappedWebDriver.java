@@ -1,6 +1,8 @@
 package org.springBddProject.qa.gui.services.webdriver;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,20 +11,36 @@ import java.util.Set;
 
 import static java.lang.String.valueOf;
 
-public class WrappedWebDriver implements WebDriver {
+
+public class WrappedWebDriver extends EventFiringWebDriver {
     private static final String LOG_EXECUTION_TIME = "{} Execution_Time(ms):; {}; Page_URL:; {};";
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
 
     public WrappedWebDriver(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
+        WrappedWebDriver.driver = driver;
     }
 
     public WebDriver getWrappedDriver(){
         return driver;
     }
+
+
+    private static final Thread CLOSE_THREAD = new Thread() {
+        @Override
+        public void run() {
+            driver.close();
+        }
+    };
+
+    static {
+        ChromeOptions capabilities = new ChromeOptions();
+        Runtime.getRuntime().addShutdownHook(CLOSE_THREAD);
+    }
+
 
     @Override
     public void get(String s) {

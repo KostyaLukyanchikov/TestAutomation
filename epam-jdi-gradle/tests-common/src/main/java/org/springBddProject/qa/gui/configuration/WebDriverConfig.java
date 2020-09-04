@@ -21,7 +21,7 @@ public class WebDriverConfig {
     private String browserName;
 
 
-    @Bean(destroyMethod = "quit")
+    @Bean(destroyMethod = "close")
     public WrappedWebDriver webDriver() throws IOException {
         return Match(browserName).of(
                 API.Case(CHROME::equalsIgnoreCase, this::initChrome)

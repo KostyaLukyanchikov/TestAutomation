@@ -16,7 +16,7 @@ import java.util.List;
 import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD;
 
 
-@ContextConfiguration(classes = {AppConfig.class})
+@ContextConfiguration(classes = {AppConfig.class, WrappedWebDriver.class})
 @DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
 public abstract class BaseSteps {
 
